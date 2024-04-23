@@ -1,0 +1,29 @@
+/*create table player_id
+(
+    student_id int primary key,
+    firstname varchar(50) not null,
+    middlename varchar(50) not null,
+    lastname varchar (50) not null,
+
+    course varchar(30),
+    age varchar (5) not null,
+    sex varchar(10) not null,
+    Nationality varchar(50) not null,
+    Religion varchar(50) not null,
+    height float not null,
+    weight float not null,
+    street_address varchar(50) not null,
+    city varchar(50) not null,
+    province varchar(50) not null,
+    mobile_no varchar(50) not null,
+    email varchar(50) not null,
+
+    sport varchar(50) not null,
+    sport_experience varchar(50) not null,
+    sport_specifics varchar(50),
+  
+    medical_condition varchar(50) not null,
+    condition_specifics varchar(50)
+)*/
+
+select * from player_id;
