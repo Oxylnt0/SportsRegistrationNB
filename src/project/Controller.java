@@ -3,7 +3,6 @@ package project;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -20,10 +19,11 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
 
 import javax.swing.JOptionPane;
 
-public class Controller implements Initializable {
+public class Controller implements Initializable{
 
     @FXML
     private TextField StudentID;
@@ -234,7 +234,7 @@ public class Controller implements Initializable {
             Connection connectdb = database.getConnection();
 
             PreparedStatement ps1 = connectdb
-                    .prepareStatement("INSERT INTO player_id Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    .prepareStatement("INSERT INTO player_id Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             ps1.setString(1, StudentID.getText());
             ps1.setString(2, firstname.getText());
