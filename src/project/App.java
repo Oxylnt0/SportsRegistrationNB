@@ -12,13 +12,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage primary) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("primary.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
         primary.setScene(scene);
-        scene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
-        primary.setTitle("Sports Registration");
-        primary.setTitle("San Sebastian Recoletos Sports Registration");
-        primary.getIcons().add(new Image("file:SSCRLogo1.png"));
+        //scene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
+        //primary.setTitle("Sports Registration");
+       // primary.setTitle("San Sebastian Recoletos Sports Registration");
+        //primary.getIcons().add(new Image("file:SSCRLogo1.png"));
         primary.setResizable(false);
         //primary.setMaximized(true);
         primary.show();
