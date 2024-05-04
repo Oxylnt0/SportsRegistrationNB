@@ -20,8 +20,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Controller implements Initializable{
 
@@ -178,6 +181,26 @@ public class Controller implements Initializable{
     @FXML
     private ToggleGroup medcond;
 
+    @FXML
+    void resetpressed(MouseEvent event) {
+        reset.setMaxSize(140,59);
+    }
+    
+    @FXML
+    void resetreleased(MouseEvent event) {
+        reset.setMaxSize(146,65);
+    }
+    
+     @FXML
+    void submitpressed(MouseEvent event) {
+         submit.setMaxSize(140,59);
+    }
+    
+    @FXML
+    void submitreleased(MouseEvent event) {
+        submit.setMaxSize(146,65);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle resourcebundle) {
 
@@ -409,9 +432,24 @@ public class Controller implements Initializable{
                 condlabel.setText("");
                 condlabel.setText("");
 
+                String password;
+                
+                while(true){
+                    String pass = JOptionPane.showInputDialog("Enter a password");
+                    String repass = JOptionPane.showInputDialog("Re-enter your password");
+                    if(pass.equals(repass)) {
+                        password = repass;
+                        break;
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Passwords do not match");
+                    }
+                }
+                
+                ps1.setString(22, password);
                 ps1.executeUpdate();
-
                 JOptionPane.showMessageDialog(null, "You have successfully registered!");
+
             }
 
         } catch (Exception e) {

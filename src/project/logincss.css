@@ -1,0 +1,15 @@
+
+#anchorpane {
+    -fx-background-color: #FF0000;
+}
+
+#borderpane {
+    -fx-background-image: url("schoolsketch.jpg");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+#loginvbox {
+    -fx-background-color: rgba(13, 59, 13, 0.9);
+}

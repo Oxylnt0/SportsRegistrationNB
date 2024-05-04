@@ -15,10 +15,10 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
         primary.setScene(scene);
-        //scene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
-        //primary.setTitle("Sports Registration");
-       // primary.setTitle("San Sebastian Recoletos Sports Registration");
-        //primary.getIcons().add(new Image("file:SSCRLogo1.png"));
+        scene.getStylesheets().add(getClass().getResource("logincss.css").toExternalForm());
+        primary.setTitle("Login Page");
+        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+        primary.getIcons().add(icon);
         primary.setResizable(false);
         //primary.setMaximized(true);
         primary.show();
