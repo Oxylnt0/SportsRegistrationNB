@@ -13,25 +13,25 @@
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.resultcontroller">
    <top>
-      <AnchorPane fx:id="anchorpane" prefHeight="146.0" prefWidth="1458.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="124.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="982.0" layoutY="2.0" prefHeight="144.0" prefWidth="446.0" spacing="10.0">
+            <VBox layoutX="1063.0" layoutY="5.0" prefHeight="112.0" prefWidth="372.0">
                <children>
                   <VBox prefHeight="67.0" prefWidth="501.0">
                      <children>
                         <Label text="Main Campus" textFill="WHITE" underline="true">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Black" size="12.0" />
                            </font>
                         </Label>
                         <Label text="Manila-Cavite Road, Sta. Cruz, Cavite City 4100, Philippines " textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                         <Label text="(046) 431-9405" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                      </children>
@@ -43,37 +43,45 @@
                      <children>
                         <Label text="Canacao Campus" textFill="WHITE" underline="true">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Black" size="12.0" />
                            </font>
                         </Label>
                         <Label text="Padre Burgos St., Bo. Rosario, San Roque, Cavite City 4100, Philippines " textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                         <Label text="(046) 504-1810" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
                </children>
             </VBox>
-            <HBox layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="958.0">
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="1.0" prefHeight="121.0" prefWidth="958.0">
                <children>
-                  <ImageView fitHeight="121.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@SSCRLogo1.png" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <VBox alignment="CENTER" prefHeight="121.0" prefWidth="820.0">
+                  <VBox alignment="CENTER_LEFT" prefHeight="121.0" prefWidth="461.0">
                      <children>
-                        <ImageView fitHeight="154.0" fitWidth="821.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@wp8de96cf9_06.png" />
                            </image>
                         </ImageView>
+                        <Label text="Sports Registration" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Black" size="36.0" />
+                           </font>
+                        </Label>
                      </children>
                   </VBox>
                </children>
@@ -87,12 +95,12 @@
    <bottom>
       <AnchorPane prefHeight="24.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
-   <center>
-      <AnchorPane prefHeight="730.0" prefWidth="1340.0" BorderPane.alignment="CENTER">
+   <right>
+      <AnchorPane prefHeight="700.0" prefWidth="1340.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="189.0" layoutY="10.0" prefHeight="668.0" prefWidth="510.0">
+            <AnchorPane layoutX="189.0" layoutY="10.0" prefHeight="668.0" prefWidth="498.0">
                <children>
-                  <VBox layoutX="12.0" layoutY="2.0" prefHeight="534.0" prefWidth="491.0">
+                  <VBox layoutX="12.0" layoutY="2.0" prefHeight="534.0" prefWidth="483.0">
                      <children>
                         <HBox fx:id="hbox" prefHeight="530.0" prefWidth="491.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
                            <children>
@@ -100,7 +108,7 @@
                                  <children>
                                     <Label text="Personal Data">
                                        <font>
-                                          <Font name="MS Reference Sans Serif" size="36.0" />
+                                          <Font name="Segoe UI Semilight" size="36.0" />
                                        </font>
                                     </Label>
                                     <Line endX="320.0" startX="-100.0">
@@ -112,10 +120,10 @@
                                        <children>
                                           <Label text="Fullname:">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font name="Segoe UI Semilight" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="Fullname" text=" ">
+                                          <Label fx:id="Fullname">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -128,7 +136,7 @@
                                              <children>
                                                 <Label text="Student ID:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="studentid" text=" ">
@@ -142,7 +150,7 @@
                                              <children>
                                                 <Label text="Course:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="course" text=" ">
@@ -160,7 +168,7 @@
                                              <children>
                                                 <Label text="Age:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="age" text=" ">
@@ -174,7 +182,7 @@
                                              <children>
                                                 <Label text="Sex:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="sex" text=" ">
@@ -188,7 +196,7 @@
                                              <children>
                                                 <Label text="Height:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="height" text=" ">
@@ -202,7 +210,7 @@
                                              <children>
                                                 <Label text="Weight:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="weight" text=" ">
@@ -220,7 +228,7 @@
                                              <children>
                                                 <Label text="Nationality:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="nation" text=" ">
@@ -234,7 +242,7 @@
                                              <children>
                                                 <Label text="Religion:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="religion" text=" ">
@@ -250,7 +258,7 @@
                                        <children>
                                           <Label text="Street Address:">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font name="Segoe UI Semilight" size="18.0" />
                                              </font>
                                           </Label>
                                           <Label fx:id="street" prefHeight="17.0" prefWidth="465.0" text=" ">
@@ -266,7 +274,7 @@
                                              <children>
                                                 <Label text="City:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="city" text=" ">
@@ -280,7 +288,7 @@
                                              <children>
                                                 <Label text="Province:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="prov" text=" ">
@@ -298,7 +306,7 @@
                                              <children>
                                                 <Label text="Mobile Number:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="mobile" text=" ">
@@ -312,7 +320,7 @@
                                              <children>
                                                 <Label text="Email:">
                                                    <font>
-                                                      <Font size="18.0" />
+                                                      <Font name="Segoe UI Semilight" size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Label fx:id="email" text=" ">
@@ -335,7 +343,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="751.0" layoutY="11.0" prefHeight="621.0" prefWidth="389.0">
+            <AnchorPane layoutX="696.0" layoutY="11.0" prefHeight="621.0" prefWidth="399.0">
                <children>
                   <VBox prefHeight="595.0" prefWidth="389.0" spacing="20.0">
                      <children>
@@ -343,7 +351,7 @@
                            <children>
                               <Label text="Sports Data">
                                  <font>
-                                    <Font name="MS Reference Sans Serif" size="36.0" />
+                                    <Font name="Segoe UI Semilight" size="36.0" />
                                  </font>
                               </Label>
                               <Line endX="240.0" startX="-100.0">
@@ -355,7 +363,7 @@
                                  <children>
                                     <Label text="Chosen Sport:">
                                        <font>
-                                          <Font size="18.0" />
+                                          <Font name="Segoe UI Semilight" size="18.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="chosensport" text=" ">
@@ -369,7 +377,7 @@
                                  <children>
                                     <Label text="Has experience in sports:">
                                        <font>
-                                          <Font size="18.0" />
+                                          <Font name="Segoe UI Semilight" size="18.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="experiencesport" text=" ">
@@ -383,7 +391,7 @@
                                  <children>
                                     <Label text="Previous sports experience/awards:">
                                        <font>
-                                          <Font size="18.0" />
+                                          <Font name="Segoe UI Semilight" size="18.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="specificsport" text=" ">
@@ -402,7 +410,7 @@
                            <children>
                               <Label text="Health Data">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font name="Segoe UI Semilight" size="36.0" />
                                  </font>
                               </Label>
                               <Line endX="240.0" startX="-100.0">
@@ -414,7 +422,7 @@
                                  <children>
                                     <Label text="Medical condition:">
                                        <font>
-                                          <Font size="18.0" />
+                                          <Font name="Segoe UI Semilight" size="18.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="condition" text=" ">
@@ -428,7 +436,7 @@
                                  <children>
                                     <Label text="Kind of condition/s:">
                                        <font>
-                                          <Font size="18.0" />
+                                          <Font name="Segoe UI Semilight" size="18.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="conditionkind" text=" ">
@@ -448,6 +456,9 @@
                </children>
             </AnchorPane>
          </children>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
       </AnchorPane>
-   </center>
+   </right>
 </BorderPane>

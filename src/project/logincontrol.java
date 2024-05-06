@@ -1,9 +1,11 @@
 package project;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -189,7 +191,7 @@ public class logincontrol {
         
          }
          
-         catch (NullPointerException e) {
+         catch (NullPointerException| SQLSyntaxErrorException e) {
             JOptionPane.showMessageDialog(null, "Incorrect Account Details");
             studidlabel.setText("");
              passlabel.setText("");

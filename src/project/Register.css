@@ -11,7 +11,7 @@
 }
 
 #anchorpane {
-    -fx-background-color: #FF0000;
+     -fx-background-color: linear-gradient(#880808, #FF0000);
 }
 
 #borderpane {

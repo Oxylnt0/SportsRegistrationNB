@@ -12,29 +12,30 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.logincontrol">
    <top>
-      <AnchorPane fx:id="anchorpane" prefHeight="148.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="124.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="982.0" layoutY="2.0" prefHeight="144.0" prefWidth="446.0" spacing="10.0">
+            <VBox layoutX="1065.0" layoutY="3.0" prefHeight="112.0" prefWidth="372.0" spacing="10.0">
                <children>
                   <VBox prefHeight="67.0" prefWidth="501.0">
                      <children>
                         <Label text="Main Campus" textFill="WHITE" underline="true">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Black" size="12.0" />
                            </font>
                         </Label>
                         <Label text="Manila-Cavite Road, Sta. Cruz, Cavite City 4100, Philippines " textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                         <Label text="(046) 431-9405" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                      </children>
@@ -42,41 +43,49 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </VBox>
-                  <VBox prefHeight="59.0" prefWidth="440.0">
+                  <VBox prefHeight="90.0" prefWidth="446.0">
                      <children>
                         <Label text="Canacao Campus" textFill="WHITE" underline="true">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Black" size="12.0" />
                            </font>
                         </Label>
                         <Label text="Padre Burgos St., Bo. Rosario, San Roque, Cavite City 4100, Philippines " textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                         <Label text="(046) 504-1810" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Segoe UI Light" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
                </children>
             </VBox>
-            <HBox layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="958.0">
+            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="958.0">
                <children>
-                  <ImageView fitHeight="121.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@SSCRLogo1.png" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <VBox alignment="CENTER" prefHeight="121.0" prefWidth="820.0">
+                  <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="820.0">
                      <children>
-                        <ImageView fitHeight="154.0" fitWidth="821.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@wp8de96cf9_06.png" />
                            </image>
                         </ImageView>
+                        <Label text="Sports Registration" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Black" size="36.0" />
+                           </font>
+                        </Label>
                      </children>
                   </VBox>
                </children>
@@ -90,18 +99,19 @@
    <center>
       <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="495.0" prefWidth="406.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="LOGIN">
+            <Label text="Login">
                <font>
-                  <Font name="Microsoft Sans Serif" size="64.0" />
+                  <Font name="Segoe UI Semilight" size="64.0" />
                </font>
             </Label>
+            <Line endX="300.0" startX="-100.0" />
             <VBox prefHeight="194.0" prefWidth="338.0">
                <children>
                   <VBox prefHeight="124.0" prefWidth="337.0">
                      <children>
                         <Label text="Student ID">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Segoe UI Light" size="24.0" />
                            </font>
                         </Label>
                         <TextField fx:id="studID" prefHeight="25.0" prefWidth="0.0" />
@@ -112,7 +122,7 @@
                      <children>
                         <Label text="Password">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Segoe UI Light" size="24.0" />
                            </font>
                         </Label>
                         <PasswordField fx:id="password" />
@@ -129,7 +139,7 @@
                            <children>
                               <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Segoe UI Light" size="24.0" />
                                  </font>
                               </Button>
                            </children>
@@ -138,7 +148,7 @@
                            <children>
                               <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Segoe UI Light" size="24.0" />
                                  </font>
                               </Button>
                            </children>
@@ -147,9 +157,9 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <Hyperlink fx:id="registerlink" onAction="#onlink" prefHeight="31.0" prefWidth="137.0" text="Register here">
+            <Hyperlink fx:id="registerlink" onAction="#onlink" prefHeight="35.0" prefWidth="114.0" text="Register here">
                <font>
-                  <Font name="MS Reference Sans Serif" size="18.0" />
+                  <Font name="Segoe UI Light" size="18.0" />
                </font></Hyperlink>
          </children>
          <padding>
@@ -167,7 +177,7 @@
       <AnchorPane prefHeight="513.0" prefWidth="537.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <AnchorPane prefHeight="513.0" prefWidth="497.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="510.0" prefWidth="493.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
       <AnchorPane prefHeight="227.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
