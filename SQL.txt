@@ -1,4 +1,4 @@
-/*create table player_id
+create table player_id
 (
     student_id int primary key,
     firstname varchar(50) not null,
@@ -23,7 +23,7 @@
     sport_specifics varchar(50),
   
     medical_condition varchar(50) not null,
-    condition_specifics varchar(50)
-)*/
+    condition_specifics varchar(50),
+    password varchar(50)
+);
 
-select * from player_id;
