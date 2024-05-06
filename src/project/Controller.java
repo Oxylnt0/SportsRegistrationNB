@@ -149,6 +149,9 @@ public class Controller implements Initializable{
     private Label nationlabel;
 
     @FXML
+    private Label silabel;
+    
+    @FXML
     private Label provlabel;
 
     @FXML
@@ -166,6 +169,9 @@ public class Controller implements Initializable{
     @FXML
     private Label wlabel;
 
+    @FXML
+    private Label clabel;
+    
     @FXML
     private Label numlabel;
 
@@ -303,6 +309,11 @@ public class Controller implements Initializable{
                     sports.getValue() == null |
                     (!yes1.isSelected() &
                             !no1.isSelected())) {
+                if (StudentID.getText().isEmpty()) {
+                    silabel.setText("*Required field");
+                } else if (!StudentID.getText().isEmpty()) {
+                    silabel.setText("");
+                }
                 if (firstname.getText().isEmpty()) {
                     fnamelabel.setText("*Required field");
                 } else if (!firstname.getText().isEmpty()) {
@@ -318,6 +329,12 @@ public class Controller implements Initializable{
                 } else if (!lastname.getText().isEmpty()) {
                     lnamelabel.setText("");
                 }
+                if (Courses.getText().isEmpty()) {
+                    clabel.setText("*Required field");
+                } else if (!Courses.getText().isEmpty()) {
+                    clabel.setText("");
+                }
+                
                 if (age.getText().isEmpty()) {
                     agelabel.setText("*Required field");
                 } else if (!age.getText().isEmpty()) {

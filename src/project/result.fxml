@@ -13,7 +13,7 @@
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.resultcontroller">
    <top>
-      <AnchorPane fx:id="anchorpane" prefHeight="79.0" prefWidth="1428.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorpane" prefHeight="146.0" prefWidth="1458.0" BorderPane.alignment="CENTER">
          <children>
             <VBox layoutX="982.0" layoutY="2.0" prefHeight="144.0" prefWidth="446.0" spacing="10.0">
                <children>
@@ -87,54 +87,51 @@
    <bottom>
       <AnchorPane prefHeight="24.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
-   <padding>
-      <Insets left="50.0" right="50.0" />
-   </padding>
    <center>
       <AnchorPane prefHeight="730.0" prefWidth="1340.0" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane layoutX="189.0" layoutY="10.0" prefHeight="668.0" prefWidth="510.0">
                <children>
-                  <VBox layoutX="12.0" layoutY="2.0" prefHeight="662.0" prefWidth="491.0">
+                  <VBox layoutX="12.0" layoutY="2.0" prefHeight="534.0" prefWidth="491.0">
                      <children>
-                        <HBox fx:id="hbox" prefHeight="666.0" prefWidth="491.0" style="-fx-background-radius: 18, 18, 18, 18; -fx-border-color: black; -fx-border-radius: 18,18,18,18;">
+                        <HBox fx:id="hbox" prefHeight="530.0" prefWidth="491.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
                            <children>
-                              <VBox alignment="TOP_CENTER" prefHeight="632.0" prefWidth="489.0">
+                              <VBox alignment="TOP_CENTER" prefHeight="508.0" prefWidth="489.0">
                                  <children>
-                                    <Label text="Personal Data" textFill="WHITE">
+                                    <Label text="Personal Data">
                                        <font>
                                           <Font name="MS Reference Sans Serif" size="36.0" />
                                        </font>
                                     </Label>
-                                    <Line endX="320.0" startX="-100.0" stroke="WHITE">
+                                    <Line endX="320.0" startX="-100.0">
                                        <VBox.margin>
                                           <Insets bottom="20.0" />
                                        </VBox.margin>
                                     </Line>
-                                    <VBox prefHeight="96.0" prefWidth="469.0">
+                                    <VBox prefHeight="62.0" prefWidth="469.0">
                                        <children>
-                                          <Label text="Fullname:" textFill="WHITE">
+                                          <Label text="Fullname:">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="Fullname" text=" " textFill="WHITE">
+                                          <Label fx:id="Fullname" text=" ">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="63.0" prefWidth="469.0">
                                        <children>
                                           <VBox prefHeight="79.0" prefWidth="462.0">
                                              <children>
-                                                <Label text="Student ID:" textFill="WHITE">
+                                                <Label text="Student ID:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="studentid" text=" " textFill="WHITE">
+                                                <Label fx:id="studentid" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -143,12 +140,12 @@
                                           </VBox>
                                           <VBox prefHeight="45.0" prefWidth="644.0">
                                              <children>
-                                                <Label text="Course:" textFill="WHITE">
+                                                <Label text="Course:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="course" text=" " textFill="WHITE">
+                                                <Label fx:id="course" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -157,16 +154,16 @@
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="65.0" prefWidth="469.0">
                                        <children>
                                           <VBox prefHeight="79.0" prefWidth="77.0">
                                              <children>
-                                                <Label text="Age:" textFill="WHITE">
+                                                <Label text="Age:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="age" text=" " textFill="WHITE">
+                                                <Label fx:id="age" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -175,12 +172,12 @@
                                           </VBox>
                                           <VBox prefHeight="79.0" prefWidth="75.0">
                                              <children>
-                                                <Label text="Sex:" textFill="WHITE">
+                                                <Label text="Sex:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="sex" text=" " textFill="WHITE">
+                                                <Label fx:id="sex" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -189,12 +186,12 @@
                                           </VBox>
                                           <VBox prefHeight="79.0" prefWidth="83.0">
                                              <children>
-                                                <Label text="Height:" textFill="WHITE">
+                                                <Label text="Height:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="height" text=" " textFill="WHITE">
+                                                <Label fx:id="height" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -203,12 +200,12 @@
                                           </VBox>
                                           <VBox prefHeight="79.0" prefWidth="185.0">
                                              <children>
-                                                <Label text="Weight:" textFill="WHITE">
+                                                <Label text="Weight:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="weight" text=" " textFill="WHITE">
+                                                <Label fx:id="weight" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -217,16 +214,16 @@
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="67.0" prefWidth="469.0">
                                        <children>
                                           <VBox prefHeight="79.0" prefWidth="429.0">
                                              <children>
-                                                <Label text="Nationality:" textFill="WHITE">
+                                                <Label text="Nationality:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="nation" text=" " textFill="WHITE">
+                                                <Label fx:id="nation" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -235,12 +232,12 @@
                                           </VBox>
                                           <VBox prefHeight="45.0" prefWidth="644.0">
                                              <children>
-                                                <Label text="Religion:" textFill="WHITE">
+                                                <Label text="Religion:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="religion" text=" " textFill="WHITE">
+                                                <Label fx:id="religion" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -249,30 +246,30 @@
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <VBox prefHeight="107.0" prefWidth="469.0">
+                                    <VBox prefHeight="58.0" prefWidth="469.0">
                                        <children>
-                                          <Label text="Street Address:" textFill="WHITE">
+                                          <Label text="Street Address:">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="street" prefHeight="17.0" prefWidth="465.0" text=" " textFill="WHITE">
+                                          <Label fx:id="street" prefHeight="17.0" prefWidth="465.0" text=" ">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <HBox prefHeight="109.0" prefWidth="469.0">
+                                    <HBox prefHeight="60.0" prefWidth="469.0">
                                        <children>
                                           <VBox prefHeight="89.0" prefWidth="409.0">
                                              <children>
-                                                <Label text="City:" textFill="WHITE">
+                                                <Label text="City:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="city" text=" " textFill="WHITE">
+                                                <Label fx:id="city" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -281,12 +278,12 @@
                                           </VBox>
                                           <VBox prefHeight="45.0" prefWidth="644.0">
                                              <children>
-                                                <Label text="Province:" textFill="WHITE">
+                                                <Label text="Province:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="prov" text=" " textFill="WHITE">
+                                                <Label fx:id="prov" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -295,16 +292,16 @@
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="50.0" prefWidth="469.0">
                                        <children>
                                           <VBox prefHeight="80.0" prefWidth="538.0">
                                              <children>
-                                                <Label text="Mobile Number:" textFill="WHITE">
+                                                <Label text="Mobile Number:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="mobile" text=" " textFill="WHITE">
+                                                <Label fx:id="mobile" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -313,12 +310,12 @@
                                           </VBox>
                                           <VBox prefHeight="45.0" prefWidth="644.0">
                                              <children>
-                                                <Label text="Email:" textFill="WHITE">
+                                                <Label text="Email:">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="email" text=" " textFill="WHITE">
+                                                <Label fx:id="email" text=" ">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -342,26 +339,26 @@
                <children>
                   <VBox prefHeight="595.0" prefWidth="389.0" spacing="20.0">
                      <children>
-                        <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="263.0" prefWidth="389.0" style="-fx-background-radius: 18,18,18,18; -fx-border-color: black; -fx-border-radius: 18,18,18,18;">
+                        <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="263.0" prefWidth="389.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
                            <children>
-                              <Label text="Sports Data" textFill="WHITE">
+                              <Label text="Sports Data">
                                  <font>
                                     <Font name="MS Reference Sans Serif" size="36.0" />
                                  </font>
                               </Label>
-                              <Line endX="240.0" startX="-100.0" stroke="WHITE">
+                              <Line endX="240.0" startX="-100.0">
                                  <VBox.margin>
                                     <Insets bottom="20.0" />
                                  </VBox.margin>
                               </Line>
                               <VBox prefHeight="61.0" prefWidth="367.0">
                                  <children>
-                                    <Label text="Chosen Sport:" textFill="WHITE">
+                                    <Label text="Chosen Sport:">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="chosensport" text=" " textFill="WHITE">
+                                    <Label fx:id="chosensport" text=" ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -370,12 +367,12 @@
                               </VBox>
                               <VBox prefHeight="65.0" prefWidth="367.0">
                                  <children>
-                                    <Label text="Has experience in sports:" textFill="WHITE">
+                                    <Label text="Has experience in sports:">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="experiencesport" text=" " textFill="WHITE">
+                                    <Label fx:id="experiencesport" text=" ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -384,12 +381,12 @@
                               </VBox>
                               <VBox prefHeight="64.0" prefWidth="367.0">
                                  <children>
-                                    <Label text="Previous sports experience/awards:" textFill="WHITE">
+                                    <Label text="Previous sports experience/awards:">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="specificsport" text=" " textFill="WHITE">
+                                    <Label fx:id="specificsport" text=" ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -401,26 +398,26 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
                            </padding>
                         </VBox>
-                        <VBox fx:id="vbox1" alignment="TOP_CENTER" prefHeight="247.0" prefWidth="389.0" style="-fx-background-radius: 18,18,18,18; -fx-border-radius: 18,18,18,18; -fx-border-color: black;">
+                        <VBox fx:id="vbox1" alignment="TOP_CENTER" prefHeight="247.0" prefWidth="389.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;">
                            <children>
-                              <Label text="Health Data" textFill="WHITE">
+                              <Label text="Health Data">
                                  <font>
                                     <Font size="36.0" />
                                  </font>
                               </Label>
-                              <Line endX="240.0" startX="-100.0" stroke="WHITE">
+                              <Line endX="240.0" startX="-100.0">
                                  <VBox.margin>
                                     <Insets bottom="20.0" />
                                  </VBox.margin>
                               </Line>
                               <VBox prefHeight="66.0" prefWidth="367.0">
                                  <children>
-                                    <Label text="Medical condition:" textFill="WHITE">
+                                    <Label text="Medical condition:">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="condition" text=" " textFill="WHITE">
+                                    <Label fx:id="condition" text=" ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -429,12 +426,12 @@
                               </VBox>
                               <VBox prefHeight="80.0" prefWidth="367.0">
                                  <children>
-                                    <Label text="Kind of condition/s:" textFill="WHITE">
+                                    <Label text="Kind of condition/s:">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="conditionkind" text=" " textFill="WHITE">
+                                    <Label fx:id="conditionkind" text=" ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

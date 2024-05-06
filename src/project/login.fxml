@@ -88,50 +88,46 @@
       </AnchorPane>
    </top>
    <center>
-      <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="495.0" prefWidth="406.0" spacing="10.0" style="-fx-background-radius: 18, 18, 18, 18; -fx-border-radius: 18, 18, 18, 18; -fx-border-color: black;" BorderPane.alignment="CENTER">
+      <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="495.0" prefWidth="406.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="LOGIN" textFill="WHITE">
+            <Label text="LOGIN">
                <font>
                   <Font name="Microsoft Sans Serif" size="64.0" />
                </font>
             </Label>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="194.0" prefWidth="338.0">
                <children>
-                  <VBox prefHeight="124.0" prefWidth="1440.0">
+                  <VBox prefHeight="124.0" prefWidth="337.0">
                      <children>
-                        <Label text="Student ID" textFill="WHITE">
+                        <Label text="Student ID">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="studID" />
-                        <Label fx:id="studidlabel" textFill="#7df514" />
+                        <TextField fx:id="studID" prefHeight="25.0" prefWidth="0.0" />
+                        <Label fx:id="studidlabel" textFill="#ee4b2b" />
                      </children>
                   </VBox>
                   <VBox prefHeight="124.0" prefWidth="1440.0">
                      <children>
-                        <Label text="Password" textFill="WHITE">
+                        <Label text="Password">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
                         <PasswordField fx:id="password" />
-                        <Label fx:id="passlabel" textFill="#7df514" />
+                        <Label fx:id="passlabel" textFill="#ee4b2b" />
                      </children>
                   </VBox>
                </children>
             </VBox>
-            <Hyperlink fx:id="registerlink" onAction="#onlink" prefHeight="31.0" prefWidth="204.0" text="Click here to register">
-               <font>
-                  <Font name="MS Reference Sans Serif" size="18.0" />
-               </font></Hyperlink>
             <AnchorPane prefHeight="80.0" prefWidth="415.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="383.0" spacing="10.0">
                      <children>
                         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="172.0">
                            <children>
-                              <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="65.0" prefWidth="146.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
+                              <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -140,7 +136,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="158.0">
                            <children>
-                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="65.0" prefWidth="146.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
+                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -151,6 +147,10 @@
                   </HBox>
                </children>
             </AnchorPane>
+            <Hyperlink fx:id="registerlink" onAction="#onlink" prefHeight="31.0" prefWidth="137.0" text="Register here">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="18.0" />
+               </font></Hyperlink>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />

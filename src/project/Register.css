@@ -22,65 +22,75 @@
 }
 
 #fnamelabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #mnamelabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #lnamelabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #agelabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #sexlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #nationlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #religionlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #hlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #streetlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #citylabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #provlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #numlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #emaillabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #explabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #sportlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
 
 #condlabel {
-    -fx-text-fill: #7df514;
+    -fx-text-fill: #EE4B2B;
 }
+
+#silabel {
+    -fx-text-fill: #EE4B2B;
+}
+
+#clabel {
+    -fx-text-fill: #EE4B2B;
+}
+
+

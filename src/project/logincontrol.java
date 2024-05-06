@@ -63,22 +63,22 @@ public class logincontrol {
 
     @FXML
     void resetpressed(MouseEvent event) {
-        reset.setMaxSize(140,59);
+        reset.setMaxSize(110,55);
     }
     
     @FXML
     void resetreleased(MouseEvent event) {
-        reset.setMaxSize(146,65);
+        reset.setMaxSize(115, 60);
     }
     
      @FXML
     void submitpressed(MouseEvent event) {
-         submit.setMaxSize(140,59);
+         submit.setMaxSize(110,55);
     }
     
     @FXML
     void submitreleased(MouseEvent event) {
-        submit.setMaxSize(146,65);
+        submit.setMaxSize(115,60);
     }
     
     @FXML
@@ -174,13 +174,13 @@ public class logincontrol {
         }
               
         else if(pass.equals(password.getText()) && !student_id.equals(studID.getText())){
-            JOptionPane.showMessageDialog(null, "Password is Incorrect / No Student ID found");
+            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
             studidlabel.setText("");
              passlabel.setText("");
         }
         
         else  {
-            JOptionPane.showMessageDialog(null, "Password is Incorrect / No Student ID found");
+            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
             studidlabel.setText("");
              passlabel.setText("");
         }
@@ -190,7 +190,7 @@ public class logincontrol {
          }
          
          catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Password is Incorrect / No Student ID found");
+            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
             studidlabel.setText("");
              passlabel.setText("");
        }

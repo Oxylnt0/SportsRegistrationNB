@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
@@ -70,150 +71,314 @@
          </BorderPane.margin>
       </AnchorPane>
    </top>
-   <left>
-      <VBox fx:id="vboxpersonal" prefHeight="667.0" prefWidth="703.0" spacing="15.0" style="-fx-background-radius: 18,18,18,18; -fx-border-color: black; -fx-border-radius: 18,18,18,18;" BorderPane.alignment="CENTER">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="1440.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="54.0" prefWidth="201.0" text="Personal Data" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Light" size="24.0" />
-               </font>
-            </Label>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
                <children>
-                  <VBox prefHeight="79.0" prefWidth="393.0" spacing="5.0">
-                     <children>
-                        <Label prefHeight="27.0" prefWidth="62.0" text="Name" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <HBox prefHeight="47.0" prefWidth="473.0" spacing="15.0">
-                           <children>
-                              <VBox prefHeight="42.0" prefWidth="144.0">
-                                 <children>
-                                    <TextField fx:id="firstname" prefHeight="25.0" prefWidth="197.0" promptText="First name">
-                                       <font>
-                                          <Font name="System Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="fnamelabel" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="middlename" prefHeight="25.0" prefWidth="111.0" promptText="Middle name">
-                                       <font>
-                                          <Font name="System Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="mnamelabel" />
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="lastname" prefHeight="30.0" prefWidth="120.0" promptText="Last name">
-                                       <font>
-                                          <Font name="System Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="lnamelabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="79.0" prefWidth="192.0" spacing="5.0">
-                     <children>
-                        <Label prefHeight="27.0" prefWidth="101.0" text="Student ID" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="StudentID" prefHeight="30.0" prefWidth="164.0" promptText="Student ID">
-                           <font>
-                              <Font name="System Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="24.0" />
+                     </font>
+                  </Button>
                </children>
-            </HBox>
-            <VBox prefHeight="170.0" prefWidth="641.0">
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
                <children>
-                  <HBox prefHeight="50.0" prefWidth="400.0" spacing="15.0">
+                  <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="669.0" prefWidth="628.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vboxathletic" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="369.0" prefWidth="627.0" spacing="15.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
+               <children>
+                  <VBox prefHeight="342.0" prefWidth="605.0" spacing="10.0">
                      <children>
-                        <VBox prefHeight="79.0" prefWidth="235.0" spacing="4.5">
+                        <Label alignment="CENTER" text="Athletic Data">
+                           <font>
+                              <Font name="Calibri Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Line endX="500.0" startX="-100.0" />
+                        <Label text="Pick your sport">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="0.0" prefWidth="327.0">
                            <children>
-                              <Label prefHeight="27.0" prefWidth="193.0" text="Course/Year/Strand" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="Courses" prefHeight="31.0" prefWidth="235.0">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
+                              <ComboBox fx:id="sports" prefHeight="40.0" prefWidth="146.0" promptText="Choose" />
+                              <Label fx:id="sportlabel" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="79.0" prefWidth="67.0" spacing="5.0">
+                        <VBox prefHeight="63.0" prefWidth="605.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="27.0" prefWidth="41.0" text="Age" textFill="WHITE">
+                              <Label text="I have experience in sports">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <TextField fx:id="age" prefHeight="36.0" prefWidth="67.0">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="agelabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="79.0" prefWidth="165.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="161.0" text="          Sex" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <HBox prefHeight="30.0" prefWidth="155.0" spacing="15.0">
+                                    <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
                                        <children>
-                                          <RadioButton fx:id="male" mnemonicParsing="false" text="Male" textFill="WHITE">
+                                          <RadioButton fx:id="yes" mnemonicParsing="false" text="Yes">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="sportexp" />
+                                             </toggleGroup>
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
-                                             <toggleGroup>
-                                                <ToggleGroup fx:id="mftoggle" />
-                                             </toggleGroup>
                                           </RadioButton>
-                                          <RadioButton fx:id="female" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$mftoggle">
+                                          <RadioButton fx:id="no" mnemonicParsing="false" text="No" toggleGroup="$sportexp">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </RadioButton>
                                        </children>
                                     </HBox>
-                                    <Label fx:id="sexlabel" />
+                                    <Label fx:id="explabel" />
                                  </children>
                               </VBox>
                            </children>
                         </VBox>
+                        <VBox prefHeight="121.0" prefWidth="605.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="492.0" text="If yes, please specify what sport/s. Also list awards and previous teams, if any. " wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="sport_experience" prefHeight="102.0" prefWidth="605.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="0.0" prefWidth="605.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vboxhealth" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="307.0" prefWidth="628.0" spacing="15.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="252.0" prefWidth="606.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" text="Health Data">
+                           <font>
+                              <Font name="Calibri Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Line endX="500.0" startX="-100.0" />
+                        <Label text="I have a medical condition">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
+                           <children>
+                              <RadioButton fx:id="yes1" mnemonicParsing="false" text="Yes">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="medcond" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="no1" mnemonicParsing="false" text="No" toggleGroup="$medcond">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <Label fx:id="condlabel" />
+                        <Label text="If yes, please specify what condition/s" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="medical_condition" prefHeight="179.0" prefWidth="606.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" right="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <left>
+      <AnchorPane prefHeight="617.0" prefWidth="763.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vboxpersonal" layoutX="38.0" layoutY="-1.0" prefHeight="605.0" prefWidth="725.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="201.0" text="Personal Data">
+                     <font>
+                        <Font name="Calibri Light" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="600.0" startX="-100.0" />
+                  <VBox prefHeight="101.0" prefWidth="574.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="101.0" text="Student ID">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="StudentID" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Student ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="silabel" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="130.0" prefWidth="703.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="93.0" prefWidth="537.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="62.0" text="Name">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="47.0" prefWidth="473.0" spacing="15.0">
+                                 <children>
+                                    <VBox prefHeight="47.0" prefWidth="169.0">
+                                       <children>
+                                          <TextField fx:id="firstname" prefHeight="25.0" prefWidth="197.0" promptText="First name">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="fnamelabel" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="47.0" prefWidth="160.0">
+                                       <children>
+                                          <TextField fx:id="middlename" prefHeight="30.0" prefWidth="141.0" promptText="Middle name">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="mnamelabel" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="47.0" prefWidth="153.0">
+                                       <children>
+                                          <TextField fx:id="lastname" prefHeight="30.0" prefWidth="120.0" promptText="Last name">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="lnamelabel" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="54.0" prefWidth="400.0" spacing="15.0">
+                  <VBox prefHeight="189.0" prefWidth="703.0">
+                     <children>
+                        <HBox prefHeight="103.0" prefWidth="703.0" spacing="15.0">
+                           <children>
+                              <VBox prefHeight="79.0" prefWidth="235.0" spacing="4.5">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="193.0" text="Course/Year/Strand">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Courses" prefHeight="31.0" prefWidth="235.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="clabel" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="87.0" prefWidth="81.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="41.0" text="Age">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TextField fx:id="age" prefHeight="24.0" prefWidth="81.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="agelabel" prefHeight="17.0" prefWidth="99.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="79.0" prefWidth="165.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="43.0" text="Sex" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="29.0" prefWidth="146.0" spacing="15.0">
+                                             <children>
+                                                <RadioButton fx:id="male" mnemonicParsing="false" text="Male">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="mftoggle" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="female" mnemonicParsing="false" text="Female" toggleGroup="$mftoggle">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="sexlabel" textAlignment="CENTER" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="69.0" prefWidth="703.0" spacing="15.0">
                      <children>
                         <VBox prefHeight="64.0" prefWidth="149.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="20.0" prefWidth="184.0" text="Nationality" textFill="WHITE">
+                              <Label prefHeight="20.0" prefWidth="184.0" text="Nationality">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -232,7 +397,7 @@
                         </VBox>
                         <VBox prefHeight="100.0" prefWidth="150.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="20.0" prefWidth="206.0" text="Religion" textFill="WHITE">
+                              <Label prefHeight="20.0" prefWidth="206.0" text="Religion">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -253,7 +418,7 @@
                            <children>
                               <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
                                  <children>
-                                    <Label prefHeight="20.0" prefWidth="179.0" text="Height" textFill="WHITE">
+                                    <Label prefHeight="20.0" prefWidth="179.0" text="Height">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
@@ -262,7 +427,7 @@
                                        <children>
                                           <TextField fx:id="height" prefHeight="25.0" prefWidth="111.0" promptText="Centimeters">
                                              <font>
-                                                <Font name="System Italic" size="14.0" />
+                                                <Font size="14.0" />
                                              </font>
                                           </TextField>
                                           <Label fx:id="hlabel" />
@@ -272,7 +437,7 @@
                               </VBox>
                               <VBox prefHeight="100.0" prefWidth="150.0" spacing="5.0">
                                  <children>
-                                    <Label prefHeight="20.0" prefWidth="356.0" text="Weight" textFill="WHITE">
+                                    <Label prefHeight="20.0" prefWidth="356.0" text="Weight">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
@@ -281,7 +446,7 @@
                                        <children>
                                           <TextField fx:id="weight" promptText="Kilograms">
                                              <font>
-                                                <Font name="System Italic" size="14.0" />
+                                                <Font size="14.0" />
                                              </font>
                                           </TextField>
                                           <Label fx:id="wlabel" />
@@ -293,271 +458,115 @@
                         </HBox>
                      </children>
                   </HBox>
-               </children>
-            </VBox>
-            <HBox prefHeight="126.0" prefWidth="641.0" spacing="15.0">
-               <children>
-                  <VBox prefHeight="54.0" prefWidth="360.0" spacing="5.0">
+                  <HBox prefHeight="107.0" prefWidth="703.0" spacing="15.0">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="501.0" text="Street Address" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font></Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="54.0" prefWidth="360.0" spacing="5.0">
                            <children>
-                              <TextField fx:id="street" prefHeight="25.0" prefWidth="111.0" promptText="House No., Street name">
-                                 <font>
-                                    <Font name="System Italic" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <Label fx:id="streetlabel" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="54.0" prefWidth="118.0" spacing="5.0">
-                     <children>
-                        <Label prefHeight="20.0" prefWidth="176.0" text="City" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <TextField fx:id="city">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></TextField>
-                              <Label fx:id="citylabel" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="54.0" prefWidth="122.0" spacing="5.0">
-                     <children>
-                        <Label prefHeight="20.0" prefWidth="190.0" text="Province" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <TextField fx:id="province">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></TextField>
-                              <Label fx:id="provlabel" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox prefHeight="114.0" prefWidth="641.0" spacing="15.0">
-               <children>
-                  <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
-                     <children>
-                        <Label text="Mobile Number" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font></Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <TextField fx:id="number" prefHeight="25.0" prefWidth="111.0" promptText="09xxxxxxxxx">
-                                 <font>
-                                    <Font name="System Italic" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <Label fx:id="numlabel" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="54.0" prefWidth="210.0" spacing="5.0">
-                     <children>
-                        <Label text="Email Address" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font></Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <TextField fx:id="email" promptText="example@gmail.com">
-                                 <font>
-                                    <Font name="System Italic" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <Label fx:id="emaillabel" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-         </children>
-         <BorderPane.margin>
-            <Insets left="30.0" right="30.0" />
-         </BorderPane.margin>
-         <padding>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-         </padding>
-      </VBox>
-   </left>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="107.0" prefWidth="1440.0" spacing="50.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
-               <children>
-                  <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="65.0" prefWidth="146.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
-               <children>
-                  <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="65.0" prefWidth="146.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </bottom>
-   <right>
-      <VBox prefHeight="450.0" prefWidth="628.0" spacing="5.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox fx:id="vboxathletic" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="333.0" prefWidth="627.0" spacing="15.0" style="-fx-background-radius: 18,18,18,18; -fx-border-color: black; -fx-border-radius: 18,18,18,18;">
-               <children>
-                  <VBox prefHeight="256.0" prefWidth="603.0" spacing="10.0">
-                     <children>
-                        <Label alignment="CENTER" text="Athletic Data" textFill="WHITE">
-                           <font>
-                              <Font name="Calibri Light" size="36.0" />
-                           </font>
-                        </Label>
-                        <Label text="Pick your sport" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <VBox prefHeight="0.0" prefWidth="327.0">
-                           <children>
-                              <ComboBox fx:id="sports" prefHeight="40.0" prefWidth="146.0" promptText="Choose" />
-                              <Label fx:id="sportlabel" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="43.0" prefWidth="327.0" spacing="10.0">
-                           <children>
-                              <Label text="I have experience in sports" textFill="WHITE">
+                              <Label prefHeight="20.0" prefWidth="501.0" text="Street Address">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
-                                       <children>
-                                          <RadioButton fx:id="yes" mnemonicParsing="false" text="Yes" textFill="WHITE">
-                                             <toggleGroup>
-                                                <ToggleGroup fx:id="sportexp" />
-                                             </toggleGroup>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </RadioButton>
-                                          <RadioButton fx:id="no" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$sportexp">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </RadioButton>
-                                       </children>
-                                    </HBox>
-                                    <Label fx:id="explabel" />
+                                    <TextField fx:id="street" prefHeight="25.0" prefWidth="111.0" promptText="House No., Street name">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="streetlabel" />
                                  </children>
                               </VBox>
                            </children>
                         </VBox>
-                        <VBox prefHeight="296.0" prefWidth="596.0" spacing="5.0">
+                        <VBox prefHeight="54.0" prefWidth="118.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="20.0" prefWidth="492.0" text="If yes, please specify what sport/s. Also list awards and previous teams, if any. " textFill="WHITE" wrapText="true">
+                              <Label prefHeight="20.0" prefWidth="176.0" text="City">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <TextArea fx:id="sport_experience" prefHeight="178.0" prefWidth="596.0">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextArea>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField fx:id="city">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="citylabel" />
+                                 </children>
+                              </VBox>
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" />
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-               </padding>
-            </VBox>
-            <VBox fx:id="vboxhealth" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="628.0" spacing="15.0" style="-fx-background-radius: 18,18,18,18; -fx-border-color: black; -fx-border-radius: 18,18,18,18;">
-               <padding>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-               </padding>
-               <children>
-                  <VBox prefHeight="248.0" prefWidth="603.0" spacing="10.0">
-                     <children>
-                        <Label alignment="CENTER" text="Health Data" textFill="WHITE">
-                           <font>
-                              <Font name="Calibri Light" size="36.0" />
-                           </font>
-                        </Label>
-                        <Label text="I have a medical condition" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
+                        <VBox prefHeight="54.0" prefWidth="122.0" spacing="5.0">
                            <children>
-                              <RadioButton fx:id="yes1" mnemonicParsing="false" text="Yes" textFill="WHITE">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="medcond" />
-                                 </toggleGroup>
+                              <Label prefHeight="20.0" prefWidth="190.0" text="Province">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Bold" size="18.0" />
                                  </font>
-                              </RadioButton>
-                              <RadioButton fx:id="no1" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$medcond">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </RadioButton>
+                              </Label>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField fx:id="province">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="provlabel" />
+                                 </children>
+                              </VBox>
                            </children>
-                        </HBox>
-                        <Label fx:id="condlabel" />
-                        <Label text="If yes, please specify what condition/s" textFill="WHITE" wrapText="true">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <TextArea fx:id="medical_condition" prefHeight="186.0" prefWidth="603.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextArea>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox prefHeight="90.0" prefWidth="693.0" spacing="15.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
+                           <children>
+                              <Label text="Mobile Number">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField fx:id="number" prefHeight="25.0" prefWidth="111.0" promptText="09xxxxxxxxx">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="numlabel" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="54.0" prefWidth="210.0" spacing="5.0">
+                           <children>
+                              <Label text="Email Address">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField fx:id="email" promptText="example@gmail.com">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="emaillabel" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </VBox>
          </children>
-         <BorderPane.margin>
-            <Insets bottom="30.0" right="30.0" />
-         </BorderPane.margin>
-         <padding>
-            <Insets bottom="30.0" top="30.0" />
-         </padding>
-      </VBox>
-   </right>
+      </AnchorPane>
+   </left>
 </BorderPane>
