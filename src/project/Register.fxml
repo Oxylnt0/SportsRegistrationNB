@@ -2,10 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
@@ -17,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Registercontroller">
    <top>
       <AnchorPane fx:id="anchorpane" prefHeight="124.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
@@ -89,205 +87,62 @@
          </BorderPane.margin>
       </AnchorPane>
    </top>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="1440.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
-               <children>
-                  <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
-                     <font>
-                        <Font name="SansSerif Regular" size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
-               <children>
-                  <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </bottom>
-   <right>
-      <VBox prefHeight="669.0" prefWidth="628.0" spacing="5.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox fx:id="vboxathletic" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="627.0" spacing="15.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
-               <children>
-                  <VBox prefHeight="334.0" prefWidth="605.0" spacing="10.0">
-                     <children>
-                        <Label alignment="CENTER" text="Athletic Data">
-                           <font>
-                              <Font name="Segoe UI Semilight" size="24.0" />
-                           </font>
-                        </Label>
-                        <Line endX="500.0" startX="-100.0" />
-                        <VBox prefHeight="0.0" prefWidth="327.0">
-                           <children>
-                              <Label text="Pick your sport">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ComboBox fx:id="sports" prefHeight="40.0" prefWidth="146.0" promptText="Choose" />
-                              <Label fx:id="sportlabel" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="128.0" prefWidth="605.0" spacing="10.0">
-                           <children>
-                              <Label text="I have experience in sports">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
-                                       <children>
-                                          <RadioButton fx:id="yes" mnemonicParsing="false" text="Yes">
-                                             <toggleGroup>
-                                                <ToggleGroup fx:id="sportexp" />
-                                             </toggleGroup>
-                                             <font>
-                                                <Font name="Segoe UI Semilight" size="14.0" />
-                                             </font>
-                                          </RadioButton>
-                                          <RadioButton fx:id="no" mnemonicParsing="false" text="No" toggleGroup="$sportexp">
-                                             <font>
-                                                <Font name="Segoe UI Semilight" size="14.0" />
-                                             </font>
-                                          </RadioButton>
-                                       </children>
-                                    </HBox>
-                                    <Label fx:id="explabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="260.0" prefWidth="605.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="492.0" text="If yes, please specify what sport/s. Also list awards and previous teams, if any. " wrapText="true">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextArea fx:id="sport_experience" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="605.0">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="0.0" prefWidth="605.0" />
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </VBox>
-            <VBox fx:id="vboxhealth" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="115.0" prefWidth="628.0" spacing="15.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
-               <children>
-                  <VBox prefHeight="273.0" prefWidth="606.0" spacing="10.0">
-                     <children>
-                        <Label alignment="CENTER" text="Health Data">
-                           <font>
-                              <Font name="Segoe UI Semilight" size="24.0" />
-                           </font>
-                        </Label>
-                        <Line endX="500.0" startX="-100.0" />
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                           <children>
-                              <Label text="I have a medical condition">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <HBox prefHeight="33.0" prefWidth="224.0" spacing="15.0">
-                                 <children>
-                                    <RadioButton fx:id="yes1" mnemonicParsing="false" text="Yes">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="medcond" />
-                                       </toggleGroup>
-                                       <font>
-                                          <Font name="Segoe UI Semilight" size="14.0" />
-                                       </font>
-                                    </RadioButton>
-                                    <RadioButton fx:id="no1" mnemonicParsing="false" text="No" toggleGroup="$medcond">
-                                       <font>
-                                          <Font name="Segoe UI Semilight" size="14.0" />
-                                       </font>
-                                    </RadioButton>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Label fx:id="condlabel" />
-                        <VBox prefHeight="301.0" prefWidth="606.0" spacing="5.0">
-                           <children>
-                              <Label text="If yes, please specify what condition/s." wrapText="true">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextArea fx:id="medical_condition" minHeight="-Infinity" prefHeight="80.0" prefWidth="605.0">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </VBox>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </VBox>
-         </children>
-         <BorderPane.margin>
-            <Insets right="30.0" />
-         </BorderPane.margin>
-      </VBox>
-   </right>
    <left>
-      <AnchorPane prefHeight="668.0" prefWidth="763.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="633.0" prefWidth="581.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="vboxpersonal" layoutX="38.0" layoutY="-1.0" prefHeight="649.0" prefWidth="725.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: black; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
+            <VBox alignment="CENTER" layoutX="19.0" layoutY="16.0" prefHeight="96.0" prefWidth="114.0">
                <children>
-                  <Label prefHeight="54.0" prefWidth="201.0" text="Personal Data">
+                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-back-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="633.0" prefWidth="581.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <AnchorPane prefHeight="467.0" prefWidth="722.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vbox" layoutX="-1.0" layoutY="10.0" prefHeight="703.0" prefWidth="723.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: red; -fx-border-radius: 10,10,10,10; -fx-background-color: white;">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="201.0" text="Registration Form">
                      <font>
                         <Font name="Segoe UI Semilight" size="24.0" />
                      </font>
                   </Label>
                   <Line endX="600.0" startX="-100.0" />
-                  <VBox prefHeight="101.0" prefWidth="574.0" spacing="5.0">
+                  <HBox prefHeight="89.0" prefWidth="703.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="27.0" prefWidth="101.0" text="Student ID">
-                           <font>
-                              <Font name="Segoe UI Semilight" size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="StudentID" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Student ID">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextField>
-                        <Label fx:id="silabel" />
-                     </children>
-                  </VBox>
-                  <HBox prefHeight="130.0" prefWidth="703.0" spacing="10.0">
-                     <children>
+                        <VBox prefHeight="89.0" prefWidth="188.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="101.0" text="Student ID">
+                                 <font>
+                                    <Font name="Segoe UI Semilight" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="StudentID" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Student ID">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label fx:id="silabel" />
+                           </children>
+                        </VBox>
                         <VBox prefHeight="93.0" prefWidth="537.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="27.0" prefWidth="62.0" text="Name">
+                              <Label prefHeight="27.0" prefWidth="62.0" text="Name" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Semilight" size="18.0" />
                                  </font>
@@ -330,11 +185,11 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="140.0" prefWidth="703.0">
+                  <VBox prefHeight="91.0" prefWidth="703.0">
                      <children>
                         <HBox prefHeight="103.0" prefWidth="703.0" spacing="15.0">
                            <children>
-                              <VBox prefHeight="79.0" prefWidth="235.0" spacing="4.5">
+                              <VBox prefHeight="91.0" prefWidth="164.0" spacing="4.5">
                                  <children>
                                     <Label prefHeight="27.0" prefWidth="193.0" text="Course/Year/Strand">
                                        <font>
@@ -349,7 +204,7 @@
                                     <Label fx:id="clabel" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="87.0" prefWidth="81.0" spacing="5.0">
+                              <VBox prefHeight="91.0" prefWidth="58.0" spacing="5.0">
                                  <children>
                                     <Label prefHeight="27.0" prefWidth="41.0" text="Age">
                                        <font>
@@ -358,7 +213,7 @@
                                     </Label>
                                     <VBox prefHeight="200.0" prefWidth="100.0">
                                        <children>
-                                          <TextField fx:id="age" prefHeight="24.0" prefWidth="81.0">
+                                          <TextField fx:id="age" prefHeight="30.0" prefWidth="34.0">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -405,44 +260,6 @@
                   </VBox>
                   <HBox prefHeight="69.0" prefWidth="703.0" spacing="15.0">
                      <children>
-                        <VBox prefHeight="64.0" prefWidth="149.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="184.0" text="Nationality">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="nationality" prefHeight="25.0" prefWidth="111.0">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="nationlabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="100.0" prefWidth="150.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="206.0" text="Religion">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="religion">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="religionlabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
                         <HBox prefHeight="79.0" prefWidth="321.0" spacing="15.0">
                            <children>
                               <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
@@ -485,71 +302,6 @@
                               </VBox>
                            </children>
                         </HBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="135.0" prefWidth="703.0" spacing="15.0">
-                     <children>
-                        <VBox prefHeight="54.0" prefWidth="360.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="501.0" text="Street Address">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="street" prefHeight="25.0" prefWidth="111.0" promptText="House No., Street name">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="streetlabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="54.0" prefWidth="118.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="176.0" text="City">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="city">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="citylabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="54.0" prefWidth="122.0" spacing="5.0">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="190.0" text="Province">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <TextField fx:id="province">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label fx:id="provlabel" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="90.0" prefWidth="693.0" spacing="15.0">
-                     <children>
                         <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
                            <children>
                               <Label text="Mobile Number">
@@ -590,6 +342,117 @@
                         </VBox>
                      </children>
                   </HBox>
+                  <Line endX="600.0" startX="-100.0" />
+                  <Label prefHeight="54.0" prefWidth="201.0" text="Select a sport:">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="203.0" prefWidth="701.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="236.0" prefWidth="150.0" style="-fx-background-color: red; -fx-background-radius: 20, 20, 20, 20;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="201.0" text="Basketball" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Semilight" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="102.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@icons8-basketball-64.png" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="basketball" mnemonicParsing="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="sportstoggle" />
+                                 </toggleGroup>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: red; -fx-background-radius: 20, 20, 20, 20;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="201.0" text="Volleyball" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Semilight" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="111.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@icons8-volleyball-68.png" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="volleyball" mnemonicParsing="false" toggleGroup="$sportstoggle">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: red; -fx-background-radius: 20, 20, 20, 20;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="201.0" text="Badminton" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Semilight" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="102.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@icons8-badminton-64.png" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="badminton" mnemonicParsing="false" toggleGroup="$sportstoggle">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Line endX="600.0" startX="-100.0" />
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="701.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
+                           <children>
+                              <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
+                           <children>
+                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -597,5 +460,5 @@
             </VBox>
          </children>
       </AnchorPane>
-   </left>
+   </center>
 </BorderPane>

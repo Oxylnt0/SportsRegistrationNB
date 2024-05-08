@@ -12,11 +12,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage primary) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        
+        Parent root = FXMLLoader.load(getClass().getResource("mainpage.fxml"));
         Scene scene = new Scene(root);
         primary.setScene(scene);
-        scene.getStylesheets().add(getClass().getResource("logincss.css").toExternalForm());
-        primary.setTitle("Login Page");
+        primary.setTitle("Sports Main Page");
+        scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         primary.getIcons().add(icon);
         primary.setResizable(false);

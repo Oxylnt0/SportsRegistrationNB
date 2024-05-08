@@ -46,6 +46,9 @@ public class logincontrol {
     private Label passlabel;
     
     @FXML
+    private Button backbtn;
+    
+    @FXML
     private Label studidlabel;
     
     @FXML
@@ -63,6 +66,44 @@ public class logincontrol {
     @FXML
     public PasswordField password;
 
+    
+    @FXML
+    void backenter(MouseEvent event) {
+         backbtn.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void back(ActionEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
+        root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
+        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("About us");
+        stage.setResizable(false);
+        stage.show();
+        
+    }
+    
+    @FXML
+    void backexit(MouseEvent event) {
+        backbtn.setStyle("-fx-background-color: red; ");
+    }
+
+    @FXML
+    void backp(MouseEvent event) {
+         backbtn.setMaxSize(85, 70);
+    }
+
+    @FXML
+    void backr(MouseEvent event) {
+         backbtn.setMaxSize(90, 75);
+    }
+    
     @FXML
     void resetpressed(MouseEvent event) {
         reset.setMaxSize(110,55);
@@ -105,11 +146,12 @@ public class logincontrol {
             password.setText("");
     }
 
+    String admin = "me";
+    String keycode = "me";
+    
     @FXML
     void onsubmit(ActionEvent event) throws SQLException, IOException {
-        
-        try {
-        
+          
          if(studID.getText().isEmpty()){
             studidlabel.setText("Please enter your Student ID");
              if(!password.getText().isEmpty()){
@@ -126,78 +168,27 @@ public class logincontrol {
          
          else if (!password.getText().isEmpty() && !studID.getText().isEmpty()) {
              
-        Database database = new Database();
-
-        Connection connectdb = database.getConnection();
-
-        Statement ps1 = connectdb.createStatement();
-        String sql = "Select * from player_id where student_id = " + studID.getText();
-        ResultSet rs = ps1.executeQuery(sql);
-            if(rs.next()){
-                student_id = rs.getString(1);
-                fullname = rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4);
-                course = rs.getString(5);
-                age = rs.getString(6);
-                sex = rs.getString(7);
-                nationality  = rs.getString(8);
-                religion = rs.getString(9);
-                height  = rs.getString(10);
-                weight = rs.getString(11);
-                street = rs.getString(12);
-                city =  rs.getString(13);
-                province = rs.getString(14);
-                mobile = rs.getString(15);
-                email = rs.getString(16);
-                sport = rs.getString(17);
-                sportexp = rs.getString(18);
-                sportcond = rs.getString(19);
-                medicalcond = rs.getString(20);
-                medicalspec = rs.getString(21);
-                pass = rs.getString(22);
-                        
-            }
-            
-        if(pass.equals(password.getText()) && student_id.equals(studID.getText())){    
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("result.fxml"));
+            if (studID.getText().equals(admin) && password.getText().equals(keycode)) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
             root = loader.load();
-        
-            resultcontroller resultcontroller = loader.getController();
-            resultcontroller.set(student_id, fullname, course, age, sex, nationality, religion, height, weight, street, city, province, mobile, email, sport, sportexp, sportcond, medicalcond, medicalspec);    
-        
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
-            scene.getStylesheets().add(getClass().getResource("resultcss.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
             Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
             stage.getIcons().add(icon);
-            stage.setTitle("Welcome " + fullname);
+            stage.setTitle("Dashboard");
             stage.setResizable(false);
             stage.show();
         }
-              
-        else if(pass.equals(password.getText()) && !student_id.equals(studID.getText())){
-            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
-            studidlabel.setText("");
-             passlabel.setText("");
-        }
-        
-        else  {
-            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
-            studidlabel.setText("");
-             passlabel.setText("");
-        }
-        
-         }
-        
-         }
+ 
          
-         catch (NullPointerException| SQLSyntaxErrorException e) {
-            JOptionPane.showMessageDialog(null, "Incorrect Account Details");
-            studidlabel.setText("");
-             passlabel.setText("");
-       }
-         
+        }
     }
-
 }
+
+
+
+
+
 
