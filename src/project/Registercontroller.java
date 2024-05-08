@@ -129,6 +129,9 @@ public class Registercontroller{
     private TextField weight;
 
     @FXML
+    private Label sportlabel;
+    
+    @FXML
     private Label wlabel;
 
     @FXML
@@ -245,7 +248,9 @@ public class Registercontroller{
                     height.getText().isEmpty() |
                     weight.getText().isEmpty() |
                     number.getText().isEmpty() |
-                    email.getText().isEmpty())
+                    email.getText().isEmpty() |
+                    (!basketball.isSelected() & !volleyball.isSelected() & !badminton.isSelected())
+                    )
                     
                      {
                          
@@ -352,6 +357,16 @@ public class Registercontroller{
                     emaillabel.setText("");
                 }
                 
+                 if (!basketball.isSelected() & !volleyball.isSelected() & !badminton.isSelected()) 
+                {
+                    sportlabel.setText("*Required field");
+                } 
+                
+                else if (basketball.isSelected() & volleyball.isSelected() & badminton.isSelected()) 
+                {
+                    sportlabel.setText("");
+                }
+                
             } 
             
             else if (!firstname.getText().isEmpty() &
@@ -363,7 +378,9 @@ public class Registercontroller{
                     !height.getText().isEmpty() &
                     !email.getText().isEmpty() &
                     !weight.getText().isEmpty() &
-                    !number.getText().isEmpty())
+                    !number.getText().isEmpty() &
+                    (basketball.isSelected() & volleyball.isSelected() & badminton.isSelected()) 
+                    )
                              {
 
                 fnamelabel.setText("");
@@ -376,6 +393,7 @@ public class Registercontroller{
                 wlabel.setText("");
                 numlabel.setText("");
                 emaillabel.setText("");
+                sportlabel.setText("");
                 
                 ps1.executeUpdate();
                 JOptionPane.showMessageDialog(null, "You have successfully registered!");
@@ -392,6 +410,9 @@ public class Registercontroller{
                                  email.setText("");
                                  Courses.setText("");
                                  StudentID.setText("");
+                                 basketball.setSelected(false);
+                                 badminton.setSelected(false);
+                                 volleyball.setSelected(false);
 
             }
 
@@ -415,6 +436,9 @@ public class Registercontroller{
         email.setText("");
         Courses.setText("");
         StudentID.setText("");
+        basketball.setSelected(false);
+        badminton.setSelected(false);
+        volleyball.setSelected(false);
 
         clabel.setText("");
         silabel.setText("");
@@ -427,6 +451,7 @@ public class Registercontroller{
         wlabel.setText("");
         numlabel.setText("");
         emaillabel.setText("");
+        sportlabel.setText("");
         
     }
 

@@ -13,86 +13,6 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Aboutcontroller">
-   <top>
-      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="124.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox layoutX="1065.0" layoutY="3.0" prefHeight="112.0" prefWidth="372.0" spacing="10.0">
-               <children>
-                  <VBox prefHeight="67.0" prefWidth="501.0">
-                     <children>
-                        <Label text="Main Campus" textFill="WHITE" underline="true">
-                           <font>
-                              <Font name="Segoe UI Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Manila-Cavite Road, Sta. Cruz, Cavite City 4100, Philippines " textFill="WHITE">
-                           <font>
-                              <Font name="Segoe UI Light" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="(046) 431-9405" textFill="WHITE">
-                           <font>
-                              <Font name="Segoe UI Light" size="12.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </VBox>
-                  <VBox prefHeight="90.0" prefWidth="446.0">
-                     <children>
-                        <Label text="Canacao Campus" textFill="WHITE" underline="true">
-                           <font>
-                              <Font name="Segoe UI Black" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Padre Burgos St., Bo. Rosario, San Roque, Cavite City 4100, Philippines " textFill="WHITE">
-                           <font>
-                              <Font name="Segoe UI Light" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="(046) 504-1810" textFill="WHITE">
-                           <font>
-                              <Font name="Segoe UI Light" size="12.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="958.0">
-               <children>
-                  <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@SSCRLogo1.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="820.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@wp8de96cf9_06.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Sports Registration" textFill="WHITE">
-                           <font>
-                              <Font name="Segoe UI Black" size="36.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-         </children>
-         <BorderPane.margin>
-            <Insets bottom="30.0" />
-         </BorderPane.margin>
-      </AnchorPane>
-   </top>
    <center>
       <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="694.0" prefWidth="656.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: red;" BorderPane.alignment="CENTER">
          <children>
@@ -191,4 +111,91 @@
    <bottom>
       <AnchorPane prefHeight="65.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
+   <top>
+      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="1065.0" layoutY="3.0" prefHeight="112.0" prefWidth="372.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="67.0" prefWidth="501.0">
+                     <children>
+                        <Label text="Main Campus" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Segoe UI Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Manila-Cavite Road, Sta. Cruz, Cavite City 4100, Philippines " textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="(046) 431-9405" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="90.0" prefWidth="446.0">
+                     <children>
+                        <Label text="Canacao Campus" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Segoe UI Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Padre Burgos St., Bo. Rosario, San Roque, Cavite City 4100, Philippines " textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="(046) 504-1810" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
+               <children>
+                  <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@SSCRLogo1.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="820.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@wp8de96cf9_06.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Sports Registration" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Black" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1024.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-contact-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1024.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-contact-64.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
 </BorderPane>

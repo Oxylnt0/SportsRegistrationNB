@@ -63,12 +63,12 @@
             <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@SSCRLogo1.png" />
-                     </image>
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
+                     <image>
+                        <Image url="@SSCRLogo1.png" />
+                     </image>
                   </ImageView>
                   <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="820.0">
                      <children>
@@ -126,7 +126,7 @@
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="register" alignment="CENTER" mnemonicParsing="false" onAction="#onregister" onMousePressed="#registerp" onMouseReleased="#registerr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00; -fx-background-radius: 20,20,20,20;" text="Register" textAlignment="CENTER">
+                                    <Button fx:id="register" alignment="CENTER" mnemonicParsing="false" onAction="#onregister" onMouseEntered="#registeren" onMouseExited="#registerex" onMousePressed="#registerp" onMouseReleased="#registerr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Register" textAlignment="CENTER">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -151,7 +151,7 @@
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="adminlogin" alignment="CENTER" mnemonicParsing="false" onAction="#onadminlogin" onMousePressed="#adminp" onMouseReleased="#adminr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00; -fx-background-radius: 20,20,20,20;" text="Admin Login" textAlignment="CENTER" wrapText="true">
+                                    <Button fx:id="adminlogin" alignment="CENTER" mnemonicParsing="false" onAction="#onadminlogin" onMouseEntered="#adminen" onMouseExited="#adminex" onMousePressed="#adminp" onMouseReleased="#adminr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Admin Login" textAlignment="CENTER" wrapText="true">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -176,7 +176,7 @@
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="aboutus" alignment="CENTER" mnemonicParsing="false" onAction="#onabout" onMousePressed="#aboutp" onMouseReleased="#aboutr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00; -fx-background-radius: 20,20,20,20;" text="About us" textAlignment="CENTER">
+                                    <Button fx:id="aboutus" alignment="CENTER" mnemonicParsing="false" onAction="#onabout" onMouseEntered="#abouten" onMouseExited="#aboutex" onMousePressed="#aboutp" onMouseReleased="#aboutr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="About us" textAlignment="CENTER">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -201,7 +201,7 @@
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="website" alignment="CENTER" mnemonicParsing="false" onAction="#onwebsite" onMousePressed="#websitep" onMouseReleased="#webister" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00; -fx-background-radius: 20,20,20,20;" text="SSCR Cavite" textAlignment="CENTER" wrapText="true">
+                                    <Button fx:id="website" alignment="CENTER" mnemonicParsing="false" onAction="#onwebsite" onMouseEntered="#weben" onMouseExited="#webex" onMousePressed="#websitep" onMouseReleased="#webister" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="SSCR Cavite" textAlignment="CENTER" wrapText="true">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>

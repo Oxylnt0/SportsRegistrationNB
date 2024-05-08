@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -14,10 +15,82 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Dashboardcontoller">
-   <top>
-      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="124.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+   <bottom>
+      <AnchorPane prefHeight="28.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="679.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="1063.0" layoutY="5.0" prefHeight="112.0" prefWidth="372.0">
+            <VBox alignment="CENTER" layoutX="22.0" layoutY="1.0" prefHeight="96.0" prefWidth="114.0">
+               <children>
+                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-back-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="602.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutY="166.0" prefHeight="444.0" prefWidth="1202.0">
+              <columns>
+                <TableColumn fx:id="studidcol" prefWidth="108.0" text="Student ID" />
+                <TableColumn fx:id="namecol" prefWidth="149.0" text="Fullname" />
+                  <TableColumn fx:id="coursecol" prefWidth="132.00003051757812" text="Course" />
+                  <TableColumn fx:id="agecol" minWidth="0.0" prefWidth="43.999969482421875" text="Age" />
+                  <TableColumn fx:id="sexcol" prefWidth="52.0" text="Sex" />
+                  <TableColumn fx:id="hcol" prefWidth="64.00003051757812" text="Height" />
+                  <TableColumn fx:id="wcol" prefWidth="72.3333740234375" text="Weight" />
+                  <TableColumn fx:id="mobilecol" minWidth="0.0" prefWidth="204.6666259765625" text="Mobile Number" />
+                  <TableColumn fx:id="emailcol" minWidth="0.0" prefWidth="212.66668701171875" text="Email" />
+                  <TableColumn fx:id="sportcol" prefWidth="159.0" text="Sport" />
+              </columns>
+            </TableView>
+            <VBox alignment="TOP_CENTER" layoutX="459.0" layoutY="16.0" prefHeight="120.0" prefWidth="292.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+               <children>
+                  <Label text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="sqlsearch" prefHeight="42.0" prefWidth="272.0" style="-fx-background-radius: 20,20,20,20;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="501.0" layoutY="620.0" prefHeight="81.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="1065.0" layoutY="3.0" prefHeight="112.0" prefWidth="372.0" spacing="10.0">
                <children>
                   <VBox prefHeight="67.0" prefWidth="501.0">
                      <children>
@@ -41,7 +114,7 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </VBox>
-                  <VBox prefHeight="59.0" prefWidth="440.0">
+                  <VBox prefHeight="90.0" prefWidth="446.0">
                      <children>
                         <Label text="Canacao Campus" textFill="WHITE" underline="true">
                            <font>
@@ -62,17 +135,17 @@
                   </VBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="1.0" prefHeight="121.0" prefWidth="958.0">
+            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@SSCRLogo1.png" />
-                     </image>
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
+                     <image>
+                        <Image url="@SSCRLogo1.png" />
+                     </image>
                   </ImageView>
-                  <VBox alignment="CENTER_LEFT" prefHeight="121.0" prefWidth="461.0">
+                  <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="820.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -88,44 +161,17 @@
                   </VBox>
                </children>
             </HBox>
+            <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1024.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-contact-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1024.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-contact-64.png" />
+               </image>
+            </ImageView>
          </children>
-         <BorderPane.margin>
-            <Insets bottom="30.0" />
-         </BorderPane.margin>
       </AnchorPane>
    </top>
-   <bottom>
-      <AnchorPane prefHeight="28.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
-   </bottom>
-   <right>
-      <AnchorPane prefHeight="604.0" prefWidth="127.0" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets top="30.0" />
-         </BorderPane.margin>
-      </AnchorPane>
-   </right>
-   <left>
-      <AnchorPane prefHeight="634.0" prefWidth="139.0" BorderPane.alignment="CENTER" />
-   </left>
-   <center>
-      <AnchorPane prefHeight="602.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView fx:id="table" layoutY="166.0" prefHeight="444.0" prefWidth="1174.0">
-              <columns>
-                <TableColumn fx:id="studidcol" prefWidth="108.0" text="Student ID" />
-                <TableColumn fx:id="namecol" prefWidth="149.0" text="Fullname" />
-                  <TableColumn fx:id="coursecol" prefWidth="132.00003051757812" text="Course" />
-                  <TableColumn fx:id="agecol" minWidth="0.0" prefWidth="43.999969482421875" text="Age" />
-                  <TableColumn fx:id="sexcol" prefWidth="52.0" text="Sex" />
-                  <TableColumn fx:id="hcol" prefWidth="64.00003051757812" text="Height" />
-                  <TableColumn fx:id="wcol" prefWidth="72.3333740234375" text="Weight" />
-                  <TableColumn fx:id="mobilecol" minWidth="0.0" prefWidth="204.6666259765625" text="Mobile Number" />
-                  <TableColumn fx:id="emailcol" minWidth="0.0" prefWidth="212.66668701171875" text="Email" />
-                  <TableColumn fx:id="sportcol" prefWidth="136.66668701171875" text="Sport" />
-              </columns>
-            </TableView>
-            <TextField fx:id="sqlsearch" layoutX="407.0" layoutY="66.0" />
-         </children>
-      </AnchorPane>
-   </center>
 </BorderPane>

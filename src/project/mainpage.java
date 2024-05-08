@@ -144,5 +144,45 @@ public class mainpage {
     void websitep(MouseEvent event) {
         website.setMaxSize(175, 65);
     }
+    
+    @FXML
+    void adminen(MouseEvent event) {
+        adminlogin.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void adminex(MouseEvent event) {
+        adminlogin.setStyle("-fx-background-color:  #ffbf00; ");
+    }
+    
+    @FXML
+    void registeren(MouseEvent event) {
+        register.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void registerex(MouseEvent event) {
+        register.setStyle("-fx-background-color:  #ffbf00; ");
+    }
+    
+    @FXML
+    void weben(MouseEvent event) {
+        website.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void webex(MouseEvent event) {
+        website.setStyle("-fx-background-color:  #ffbf00; ");
+    }
+    
+    @FXML
+    void abouten(MouseEvent event) {
+        aboutus.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void aboutex(MouseEvent event) {
+        aboutus.setStyle("-fx-background-color:  #ffbf00; ");
+    }
 
 }
