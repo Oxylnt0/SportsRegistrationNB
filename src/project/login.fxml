@@ -16,9 +16,9 @@
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.logincontrol">
    <center>
-      <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="495.0" prefWidth="406.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
+      <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="433.0" prefWidth="423.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Login">
+            <Label text="Admin Login">
                <font>
                   <Font name="Segoe UI Semilight" size="64.0" />
                </font>
@@ -28,13 +28,13 @@
                <children>
                   <VBox prefHeight="124.0" prefWidth="337.0">
                      <children>
-                        <Label text="Student ID">
+                        <Label text="Username">
                            <font>
                               <Font name="Segoe UI Light" size="24.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="studID" prefHeight="25.0" prefWidth="0.0" />
-                        <Label fx:id="studidlabel" textFill="#ee4b2b" />
+                        <TextField fx:id="username" prefHeight="25.0" prefWidth="0.0" />
+                        <Label fx:id="userlabel" textFill="#ee4b2b" />
                      </children>
                   </VBox>
                   <VBox prefHeight="124.0" prefWidth="1440.0">
@@ -56,7 +56,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="172.0">
                            <children>
-                              <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
+                              <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000;" text="Reset" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Light" size="24.0" />
                                  </font>
@@ -65,7 +65,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="158.0">
                            <children>
-                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
+                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000;" text="Submit" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Light" size="24.0" />
                                  </font>
@@ -84,14 +84,14 @@
             <Insets />
          </opaqueInsets>
          <BorderPane.margin>
-            <Insets top="30.0" />
+            <Insets top="100.0" />
          </BorderPane.margin>
       </VBox>
    </center>
    <left>
       <AnchorPane prefHeight="513.0" prefWidth="537.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="96.0" prefWidth="114.0">
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
                <children>
                   <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
                      <font>
@@ -113,7 +113,7 @@
       <AnchorPane prefHeight="510.0" prefWidth="493.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <AnchorPane prefHeight="227.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="277.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
       <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
@@ -163,7 +163,7 @@
                   </VBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
+            <HBox alignment="CENTER" layoutX="23.0" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>

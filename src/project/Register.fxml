@@ -19,7 +19,7 @@
    <left>
       <AnchorPane prefHeight="633.0" prefWidth="581.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" layoutX="19.0" layoutY="16.0" prefHeight="96.0" prefWidth="114.0">
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
                <children>
                   <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
                      <font>
@@ -365,7 +365,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
                            <children>
-                              <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;" text="Reset" textFill="WHITE">
+                              <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red;" text="Reset" textFill="WHITE">
                                  <font>
                                     <Font name="SansSerif Regular" size="24.0" />
                                  </font>
@@ -374,7 +374,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
                            <children>
-                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;" text="Submit" textFill="WHITE">
+                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red;" text="Submit" textFill="WHITE">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -439,7 +439,7 @@
                   </VBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
+            <HBox alignment="CENTER" layoutX="23.0" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>

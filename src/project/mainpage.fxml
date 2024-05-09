@@ -60,7 +60,7 @@
                   </VBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
+            <HBox alignment="CENTER" layoutX="23.0" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>

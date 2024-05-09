@@ -49,7 +49,7 @@ public class logincontrol {
     private Button backbtn;
     
     @FXML
-    private Label studidlabel;
+    private Label userlabel;
     
     @FXML
     private Button reset;
@@ -61,11 +61,30 @@ public class logincontrol {
     private Button submit;
     
     @FXML
-    private TextField studID;
+    private TextField username;
      
     @FXML
     public PasswordField password;
 
+    @FXML
+    void reseten(MouseEvent event) {
+        reset.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void resetex(MouseEvent event) {
+        reset.setStyle("-fx-background-color: red; ");
+    }
+    
+    @FXML
+    void submiten(MouseEvent event) {
+        submit.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void submitex(MouseEvent event) {
+        submit.setStyle("-fx-background-color: red; ");
+    }
     
     @FXML
     void backenter(MouseEvent event) {
@@ -142,18 +161,18 @@ public class logincontrol {
         
     @FXML
     void onreset(ActionEvent event) {
-            studID.setText("");
+            username.setText("");
             password.setText("");
     }
 
-    String admin = "me";
-    String keycode = "me";
+    String admin = "admin";
+    String keycode = "password";
     
     @FXML
     void onsubmit(ActionEvent event) throws SQLException, IOException {
           
-         if(studID.getText().isEmpty()){
-            studidlabel.setText("Please enter your Student ID");
+         if(username.getText().isEmpty()){
+            userlabel.setText("Please enter your Username");
              if(!password.getText().isEmpty()){
                  passlabel.setText("");
              }
@@ -161,27 +180,33 @@ public class logincontrol {
         
          if(password.getText().isEmpty()){
              passlabel.setText("Please enter your Password");
-             if(!studID.getText().isEmpty()){
-            studidlabel.setText("");
+             if(!username.getText().isEmpty()){
+            userlabel.setText("");
          }
         }
          
-         else if (!password.getText().isEmpty() && !studID.getText().isEmpty()) {
+         else if (!password.getText().isEmpty() && !username.getText().isEmpty()) {
              
-            if (studID.getText().equals(admin) && password.getText().equals(keycode)) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
-            root = loader.load();
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
-            Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
-            stage.getIcons().add(icon);
-            stage.setTitle("Dashboard");
-            stage.setResizable(false);
-            stage.show();
-        }
- 
+            if (username.getText().equals(admin) && password.getText().equals(keycode)) {
+                
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+                root = loader.load();
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+                Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+                stage.getIcons().add(icon);
+                stage.setTitle("Dashboard");
+                stage.setResizable(false);
+                stage.show();
+                
+         }
+            else {
+                JOptionPane.showMessageDialog(null, "Incorrect Account Details", "Error", JOptionPane.ERROR_MESSAGE);
+                userlabel.setText("");
+                passlabel.setText("");
+            }
          
         }
     }

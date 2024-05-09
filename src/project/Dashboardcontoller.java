@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,6 +34,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 public class Dashboardcontoller implements Initializable{
 
@@ -165,7 +167,9 @@ public class Dashboardcontoller implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
        try {
            loadtable();
-       } catch (SQLException ex) {
+       } catch(SQLNonTransientConnectionException e){
+            JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException ex) {
            Logger.getLogger(Dashboardcontoller.class.getName()).log(Level.SEVERE, null, ex);
        }
     }

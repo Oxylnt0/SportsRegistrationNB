@@ -28,7 +28,7 @@
    <left>
       <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" layoutX="22.0" layoutY="1.0" prefHeight="96.0" prefWidth="114.0">
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
                <children>
                   <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
                      <font>
@@ -135,7 +135,7 @@
                   </VBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
+            <HBox alignment="CENTER" layoutX="23.0" layoutY="2.0" prefHeight="121.0" prefWidth="553.0">
                <children>
                   <ImageView fitHeight="93.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>

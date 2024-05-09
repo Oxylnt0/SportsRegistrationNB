@@ -1,5 +1,6 @@
 package project;
 
+import java.awt.HeadlessException;
 import java.io.IOException;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -16,6 +17,9 @@ import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
+import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,6 +29,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import org.apache.derby.shared.common.error.DerbySQLIntegrityConstraintViolationException;
 
 public class Registercontroller{
 
@@ -162,6 +167,26 @@ public class Registercontroller{
     }
 
     @FXML
+    void submiten(MouseEvent event) {
+        submit.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void submitex(MouseEvent event) {
+        submit.setStyle("-fx-background-color: red; ");
+    }
+    
+     @FXML
+    void reseten(MouseEvent event) {
+        reset.setStyle("-fx-background-color: green; ");
+    }
+
+    @FXML
+    void resetex(MouseEvent event) {
+        reset.setStyle("-fx-background-color: red; ");
+    }
+    
+    @FXML
     void backp(MouseEvent event) {
         backbtn.setMaxSize(85, 70);
     }
@@ -173,26 +198,26 @@ public class Registercontroller{
 
     @FXML
     void resetpressed(MouseEvent event) {
-        reset.setMaxSize(140,59);
+        reset.setMaxSize(110,55);
     }
     
     @FXML
     void resetreleased(MouseEvent event) {
-        reset.setMaxSize(146,65);
+        reset.setMaxSize(115,60);
     }
     
      @FXML
     void submitpressed(MouseEvent event) {
-         submit.setMaxSize(140,59);
+         submit.setMaxSize(110,55);
     }
     
     @FXML
     void submitreleased(MouseEvent event) {
-        submit.setMaxSize(146,65);
+        submit.setMaxSize(115,60);
     }
     
     @FXML
-    public void onsubmit(ActionEvent event) {
+    public void onsubmit(ActionEvent event) throws SQLException, IOException {
 
         try {
             String sex = "";
@@ -296,8 +321,9 @@ public class Registercontroller{
                 if (Courses.getText().isEmpty()) 
                 {
                     clabel.setText("*Required field");
-                } else if (!Courses.getText().isEmpty()) 
-                    
+                } 
+                
+                else if (!Courses.getText().isEmpty())     
                 {
                     clabel.setText("");
                 }
@@ -362,7 +388,7 @@ public class Registercontroller{
                     sportlabel.setText("*Required field");
                 } 
                 
-                else if (basketball.isSelected() & volleyball.isSelected() & badminton.isSelected()) 
+                else if (basketball.isSelected() | volleyball.isSelected() | badminton.isSelected()) 
                 {
                     sportlabel.setText("");
                 }
@@ -379,7 +405,7 @@ public class Registercontroller{
                     !email.getText().isEmpty() &
                     !weight.getText().isEmpty() &
                     !number.getText().isEmpty() &
-                    (basketball.isSelected() & volleyball.isSelected() & badminton.isSelected()) 
+                    (basketball.isSelected() | volleyball.isSelected() | badminton.isSelected()) 
                     )
                              {
 
@@ -396,8 +422,19 @@ public class Registercontroller{
                 sportlabel.setText("");
                 
                 ps1.executeUpdate();
-                JOptionPane.showMessageDialog(null, "You have successfully registered!");
                 
+                                 FXMLLoader loader = new FXMLLoader(getClass().getResource("results.fxml"));
+                                 root = loader.load();
+                                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                                 scene = new Scene(root);
+                                 stage.setScene(scene);
+                                 scene.getStylesheets().add(getClass().getResource("resultscss.css").toExternalForm());
+                                 Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+                                 stage.getIcons().add(icon);
+                                 stage.setTitle("Thank you");
+                                 stage.setResizable(false);
+                                 stage.show();
+
                                  firstname.setText("");
                                  middlename.setText("");
                                  lastname.setText("");
@@ -416,8 +453,12 @@ public class Registercontroller{
 
             }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (DerbySQLIntegrityConstraintViolationException e) {
+            JOptionPane.showMessageDialog(null, "Student ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch(SQLDataException e){
+            JOptionPane.showMessageDialog(null, "Please input correct Data", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch(SQLNonTransientConnectionException e){
+            JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
