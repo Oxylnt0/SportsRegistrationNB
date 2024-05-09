@@ -5,7 +5,7 @@ create table player_id
     firstname varchar(50) not null,
     middlename varchar(50) not null,
     lastname varchar (50) not null,
-    course varchar(30),
+    course varchar(30) not null,
     age varchar (5) not null,
     sex varchar(10) not null,
     height float not null,
