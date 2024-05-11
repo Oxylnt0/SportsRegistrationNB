@@ -1,6 +1,6 @@
 create table player_id
 (
-    student_id int primary key not null,
+    student_id bigint primary key not null,
     firstname varchar(50) not null,
     middlename varchar(50) not null,
     lastname varchar (50) not null,
