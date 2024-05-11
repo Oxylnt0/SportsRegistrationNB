@@ -170,7 +170,7 @@ public class Registercontroller {
 
     @FXML
     void backexit(MouseEvent event) {
-        backbtn.setStyle("-fx-background-color: red; ");
+        backbtn.setStyle("-fx-background-color:  red; ");
     }
 
     @FXML
@@ -180,7 +180,7 @@ public class Registercontroller {
 
     @FXML
     void submitex(MouseEvent event) {
-        submit.setStyle("-fx-background-color: red; ");
+        submit.setStyle("-fx-background-color:  #ffbf00; ");
     }
     
      @FXML
@@ -190,7 +190,7 @@ public class Registercontroller {
 
     @FXML
     void resetex(MouseEvent event) {
-        reset.setStyle("-fx-background-color: red; ");
+        reset.setStyle("-fx-background-color:  #ffbf00; ");
     }
     
     @FXML
@@ -310,7 +310,7 @@ public class Registercontroller {
                 
                 if (middlename.getText().isEmpty())
                 {
-                    mnamelabel.setText("*Required field");
+                    mnamelabel.setText("*Input Middlename");
                 } 
                 
                 else if (!middlename.getText().isEmpty()) 

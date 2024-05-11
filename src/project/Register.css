@@ -57,6 +57,10 @@
     -fx-text-fill: #EE4B2B;
 }
 
+#wlabel {
+    -fx-text-fill: #EE4B2B;
+}
+
 #streetlabel {
     -fx-text-fill: #EE4B2B;
 }

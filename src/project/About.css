@@ -9,5 +9,8 @@
     -fx-background-size: cover;
 }
 
+#childborder{
+     -fx-background-color: linear-gradient(#880808, #FF0000);
+}
 
 

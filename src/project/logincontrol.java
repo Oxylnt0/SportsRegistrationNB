@@ -81,7 +81,7 @@ public class logincontrol {
 
     @FXML
     void resetex(MouseEvent event) {
-        reset.setStyle("-fx-background-color: red; ");
+        reset.setStyle("-fx-background-color:  #ffbf00; ");
     }
     
     @FXML
@@ -91,7 +91,7 @@ public class logincontrol {
 
     @FXML
     void submitex(MouseEvent event) {
-        submit.setStyle("-fx-background-color: red; ");
+        submit.setStyle("-fx-background-color:  #ffbf00; ");
     }
     
     @FXML

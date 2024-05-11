@@ -446,7 +446,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="107.0" prefWidth="151.0">
                            <children>
-                              <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red;" text="Reset" textFill="WHITE">
+                              <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #ffbf00;" text="Reset">
                                  <font>
                                     <Font name="SansSerif Regular" size="24.0" />
                                  </font>
@@ -455,7 +455,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="107.0" prefWidth="147.0">
                            <children>
-                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: red;" text="Submit" textFill="WHITE">
+                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #ffbf00;" text="Submit">
                                  <font>
                                     <Font size="24.0" />
                                  </font>

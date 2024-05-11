@@ -106,7 +106,7 @@ public class addadmincontroller {
 
     @FXML
     void backexit(MouseEvent event) {
-        backbtn.setStyle("-fx-background-color: red; ");
+        backbtn.setStyle("-fx-background-color:  red; ");
     }
 
     @FXML
@@ -124,6 +124,10 @@ public class addadmincontroller {
             username.setText("");
             password.setText("");
             reenterpass.setText("");
+            userlabel.setText("");
+            emaillabel.setText("");
+            passlabel.setText("");
+            repasslabel.setText("");
     }
 
     @FXML
@@ -234,7 +238,7 @@ public class addadmincontroller {
 
     @FXML
     void resetex(MouseEvent event) {
-        reset.setStyle("-fx-background-color: red; ");
+        reset.setStyle("-fx-background-color:  #ffbf00; ");
     }
 
      @FXML
@@ -254,7 +258,7 @@ public class addadmincontroller {
 
     @FXML
     void submitex(MouseEvent event) {
-        submit.setStyle("-fx-background-color: red; ");
+        submit.setStyle("-fx-background-color:  #ffbf00; ");
     }
 
     @FXML
