@@ -9,3 +9,18 @@
     -fx-background-size: cover;
 }
 
+#registerbox {
+     -fx-background-color: linear-gradient(#880808, #FF0000);
+}
+
+#adminbox {
+     -fx-background-color: linear-gradient(#880808, #FF0000);
+}
+
+#aboutbox {
+     -fx-background-color: linear-gradient(#880808, #FF0000);
+}
+
+#webbox {
+     -fx-background-color: linear-gradient(#880808, #FF0000);
+}

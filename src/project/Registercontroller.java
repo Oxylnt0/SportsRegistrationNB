@@ -290,7 +290,7 @@ public class Registercontroller {
                          
                 if (StudentID.getText().isEmpty()) 
                 {
-                    silabel.setText("*Required field");
+                    silabel.setText("*Input Student ID");
                 } 
                 
                 else if (!StudentID.getText().isEmpty()) 
@@ -300,7 +300,7 @@ public class Registercontroller {
                 
                 if (firstname.getText().isEmpty()) 
                 {
-                    fnamelabel.setText("*Required field");
+                    fnamelabel.setText("*Input Fullname");
                 } 
                 
                 else if (!firstname.getText().isEmpty()) 
@@ -319,7 +319,7 @@ public class Registercontroller {
                 }
                 
                 if (lastname.getText().isEmpty()) {
-                    lnamelabel.setText("*Required field");
+                    lnamelabel.setText("*Input Lastname");
                 } 
                 
                 else if (!lastname.getText().isEmpty()) 
@@ -329,7 +329,7 @@ public class Registercontroller {
                 
                 if (Courses.getText().isEmpty()) 
                 {
-                    clabel.setText("*Required field");
+                    clabel.setText("*Input Level");
                 } 
                 
                 else if (!Courses.getText().isEmpty())     
@@ -338,7 +338,7 @@ public class Registercontroller {
                 }
                 
                 if (age.getText().isEmpty()) {
-                    agelabel.setText("*Required field");
+                    agelabel.setText("*Input Age");
                 } 
                 
                 else if (!age.getText().isEmpty()) 
@@ -348,7 +348,7 @@ public class Registercontroller {
                 
                 if (!male.isSelected() & !female.isSelected()) 
                 {
-                    sexlabel.setText("*Required field");
+                    sexlabel.setText("*Input your sex");
                 } 
                 
                 else if (male.isSelected() | female.isSelected()) 
@@ -358,7 +358,7 @@ public class Registercontroller {
                 
                 if (height.getText().isEmpty()) 
                 {
-                    hlabel.setText("*Required field");
+                    hlabel.setText("*Input Height");
                 } 
                 
                 else if (!height.getText().isEmpty()) 
@@ -367,7 +367,7 @@ public class Registercontroller {
                 }
                 if (weight.getText().isEmpty()) 
                 {
-                    wlabel.setText("*Required field");
+                    wlabel.setText("*Input Weight");
                 } 
                 
                 else if (!weight.getText().isEmpty()) 
@@ -377,7 +377,7 @@ public class Registercontroller {
                 
                 if (number.getText().isEmpty()) 
                 {
-                    numlabel.setText("*Required field");
+                    numlabel.setText("*Input Mobile No");
                 } 
                 
                 else if (!number.getText().isEmpty()) 
@@ -385,7 +385,7 @@ public class Registercontroller {
                     numlabel.setText("");
                 }
                 if (email.getText().isEmpty()) {
-                    emaillabel.setText("*Required field");
+                    emaillabel.setText("*Input Email");
                 } 
                 
                 else if (!email.getText().isEmpty()) {
@@ -394,7 +394,7 @@ public class Registercontroller {
                 
                  if (!basketball.isSelected() & !volleyball.isSelected() & !badminton.isSelected()) 
                 {
-                    sportlabel.setText("*Required field");
+                    sportlabel.setText("*Select a sport");
                 } 
                 
                 else if (basketball.isSelected() | volleyball.isSelected() | badminton.isSelected()) 

@@ -1,10 +1,13 @@
-
 #anchorpane {
     -fx-background-color: linear-gradient(#880808, #FF0000);
 }
 
+#childborder{
+    -fx-background-color: linear-gradient(#880808, #FF0000);
+}
+
 #borderpane {
-    -fx-background-image: url("schoolsketch.jpg");
+    -fx-background-image: url("sports.png");
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;

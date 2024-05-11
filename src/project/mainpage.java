@@ -126,42 +126,54 @@ public class mainpage {
     
     @FXML
     void onregister(ActionEvent event) throws IOException {
-     fadeout();
-    }
-    
-    private void fadeout() throws IOException {
         
-        FadeTransition transition = new FadeTransition();
-        transition.setDuration(Duration.millis(500));
-        transition.setNode(mainanchorpane);
-        transition.setFromValue(1);
-        transition.setToValue(0);
-
-        transition.setOnFinished((ActionEvent event) -> {
-            try {
-                load();
-            } catch (IOException ex) {
-                Logger.getLogger(mainpage.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        });
-
-        transition.play();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Register.fxml"));
+        root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
+        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("Register");
+        stage.setResizable(false);
+        stage.show();
+        
     }
     
-    private void load() throws IOException {
-
-        Parent view;
-        view = (BorderPane) FXMLLoader.load(getClass().getResource("Register.fxml"));
-        Scene newscene = new Scene(view);
-        Stage newstage = (Stage) borderpane.getScene().getWindow();
-        newstage.setScene(newscene);
-        newscene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
-        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
-        newstage.getIcons().add(icon);
-        newstage.setTitle("Registration");
-        newstage.setResizable(false);
-
-    }
+//    private void fadeout() throws IOException {
+//        
+//        FadeTransition transition = new FadeTransition();
+//        transition.setDuration(Duration.millis(500));
+//        transition.setNode(mainanchorpane);
+//        transition.setFromValue(1);
+//        transition.setToValue(0);
+//
+//        transition.setOnFinished((ActionEvent event) -> {
+//            try {
+//                load();
+//            } catch (IOException ex) {
+//                Logger.getLogger(mainpage.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        });
+//
+//        transition.play();
+//    }
+//    
+//    private void load() throws IOException {
+//
+//        Parent view;
+//        view = (BorderPane) FXMLLoader.load(getClass().getResource("Register.fxml"));
+//        Scene newscene = new Scene(view);
+//        Stage newstage = (Stage) borderpane.getScene().getWindow();
+//        newstage.setScene(newscene);
+//        newscene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
+//        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
+//        newstage.getIcons().add(icon);
+//        newstage.setTitle("Registration");
+//        newstage.setResizable(false);
+//
+//    }
 
     @FXML
     void registerp(MouseEvent event) {

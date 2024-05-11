@@ -45,6 +45,9 @@ public class logincontrol {
     private BorderPane borderpane;
 
     @FXML
+    private BorderPane childborder;
+    
+    @FXML
     private VBox loginvbox;
 
     @FXML
@@ -150,6 +153,8 @@ public class logincontrol {
         
     @FXML
     void onreset(ActionEvent event) {
+            passlabel.setText("");
+            userlabel.setText("");
             username.setText("");
             password.setText("");
     }
