@@ -35,6 +35,9 @@ public class resultscontroller {
     private AnchorPane anchorpane;
 
     @FXML
+    private Label tyname;
+    
+    @FXML
     private Button backbtn;
 
     @FXML
@@ -82,4 +85,9 @@ public class resultscontroller {
         stage.show();
         
     }
+    
+    public void displayname(String name){
+        tyname.setText(name);
+    }
+    
 }

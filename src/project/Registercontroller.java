@@ -21,17 +21,21 @@ import java.sql.SQLDataException;
 import java.sql.SQLException;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.CacheHint;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import javax.swing.JOptionPane;
 import org.apache.derby.shared.common.error.DerbySQLIntegrityConstraintViolationException;
 
-public class Registercontroller{
+public class Registercontroller {
 
     private Stage stage;
     private Scene scene;
@@ -43,6 +47,9 @@ public class Registercontroller{
     @FXML
     private TextField StudentID;
 
+    @FXML
+    private AnchorPane mainanchorpane;
+    
     @FXML
     private TextField age;
 
@@ -150,7 +157,7 @@ public class Registercontroller{
         scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("About us");
+        stage.setTitle("Home Page");
         stage.setResizable(false);
         stage.show();
         
@@ -244,7 +251,7 @@ public class Registercontroller{
             }
 
             // SQL
-            Database database = new Database();
+            //Database database = new Database();
 
             Connection connectdb = Database.getConnection();
 
@@ -264,9 +271,11 @@ public class Registercontroller{
             ps1.setString(11, email.getText());
             ps1.setString(12, sports);
             
-            if (firstname.getText().isEmpty() |
+            if (StudentID.getText().isEmpty() |
+                    firstname.getText().isEmpty() |
                     middlename.getText().isEmpty() |
                     lastname.getText().isEmpty() |
+                    Courses.getText().isEmpty() |
                     age.getText().isEmpty() |
                     (!male.isSelected() &
                             !female.isSelected())|
@@ -395,9 +404,11 @@ public class Registercontroller{
                 
             } 
             
-            else if (!firstname.getText().isEmpty() &
+            else if (!StudentID.getText().isEmpty() &
+                    !firstname.getText().isEmpty() &
                     !middlename.getText().isEmpty() &
                     !lastname.getText().isEmpty() &
+                    !Courses.getText().isEmpty() &
                     !age.getText().isEmpty() &
                     (male.isSelected() |
                       female.isSelected()) &
@@ -409,9 +420,11 @@ public class Registercontroller{
                     )
                              {
 
+                silabel.setText("");                
                 fnamelabel.setText("");
                 mnamelabel.setText("");
                 lnamelabel.setText("");
+                clabel.setText("");
                 agelabel.setText("");
                 sexlabel.setText("");
                 sexlabel.setText("");
@@ -423,8 +436,14 @@ public class Registercontroller{
                 
                 ps1.executeUpdate();
                 
+                                String fullname = firstname.getText() + " " + middlename.getText() + " " + lastname.getText();
+                
                                  FXMLLoader loader = new FXMLLoader(getClass().getResource("results.fxml"));
                                  root = loader.load();
+                                 
+                                 resultscontroller resultscontroller = loader.getController();
+                                 resultscontroller.displayname(fullname);
+                                 
                                  stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                                  scene = new Scene(root);
                                  stage.setScene(scene);

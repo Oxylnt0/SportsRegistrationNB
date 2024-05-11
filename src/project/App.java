@@ -16,7 +16,7 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("mainpage.fxml"));
         Scene scene = new Scene(root);
         primary.setScene(scene);
-        primary.setTitle("Sports Main Page");
+        primary.setTitle("Home Page");
         scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         primary.getIcons().add(icon);

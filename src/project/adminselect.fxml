@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.mainpage">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.adminselectcontroller">
    <top>
       <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
@@ -112,7 +112,7 @@
       <AnchorPane prefHeight="227.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <AnchorPane fx:id="mainanchorpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" layoutX="91.0" layoutY="150.0" prefHeight="274.0" prefWidth="1277.0" spacing="100.0">
                <children>
@@ -120,13 +120,13 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@d73332e25ec739d8f311da4ebb782dbed0c530e8_s2_n3_y1.png" />
+                              <Image url="@icons8-person-50.png" />
                            </image></ImageView>
                         <AnchorPane prefHeight="75.0" prefWidth="200.0">
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="register" alignment="CENTER" mnemonicParsing="false" onAction="#onregister" onMouseEntered="#registeren" onMouseExited="#registerex" onMousePressed="#registerp" onMouseReleased="#registerr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Register" textAlignment="CENTER">
+                                    <Button fx:id="registerlist" alignment="CENTER" mnemonicParsing="false" onAction="#onregisterlist" onMouseEntered="#registeren" onMouseExited="#registerex" onMousePressed="#registerp" onMouseReleased="#registerr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Registrant List" textAlignment="CENTER">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -140,7 +140,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -151,7 +151,7 @@
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="adminlogin" alignment="CENTER" mnemonicParsing="false" onAction="#onadminlogin" onMouseEntered="#adminen" onMouseExited="#adminex" onMousePressed="#adminp" onMouseReleased="#adminr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Admin Login" textAlignment="CENTER" wrapText="true">
+                                    <Button fx:id="adminlist" alignment="CENTER" mnemonicParsing="false" onAction="#onadminlist" onMouseEntered="#adminen" onMouseExited="#adminex" onMousePressed="#adminp" onMouseReleased="#adminr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Admin List" textAlignment="CENTER" wrapText="true">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -165,43 +165,18 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="25.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
                      <children>
-                        <ImageView fitHeight="125.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="140.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@0c66e5e199b4800e103006b71cd28753c2b2d541_s2_n3_y1.png" />
+                              <Image url="@icons8-add-administrator-50.png" />
                            </image>
                         </ImageView>
                         <AnchorPane prefHeight="75.0" prefWidth="200.0">
                            <children>
                               <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="aboutus" alignment="CENTER" mnemonicParsing="false" onAction="#onabout" onMouseEntered="#abouten" onMouseExited="#aboutex" onMousePressed="#aboutp" onMouseReleased="#aboutr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="About us" textAlignment="CENTER">
-                                       <font>
-                                          <Font name="Segoe UI Light" size="24.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
-                  </VBox>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="25.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@SSCRLogo1.png" />
-                           </image>
-                        </ImageView>
-                        <AnchorPane prefHeight="75.0" prefWidth="200.0">
-                           <children>
-                              <HBox alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="200.0">
-                                 <children>
-                                    <Button fx:id="website" alignment="CENTER" mnemonicParsing="false" onAction="#onwebsite" onMouseEntered="#weben" onMouseExited="#webex" onMousePressed="#websitep" onMouseReleased="#webister" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="SSCR Cavite" textAlignment="CENTER" wrapText="true">
+                                    <Button fx:id="addadmin" alignment="CENTER" mnemonicParsing="false" onAction="#onaddadmin" onMouseEntered="#adden" onMouseExited="#addex" onMousePressed="#addp" onMouseReleased="#addr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Add Admin" textAlignment="CENTER">
                                        <font>
                                           <Font name="Segoe UI Light" size="24.0" />
                                        </font>
@@ -217,6 +192,22 @@
                   </VBox>
                </children>
             </HBox>
+            <VBox alignment="CENTER" layoutY="-28.0" prefHeight="96.0" prefWidth="114.0">
+               <children>
+                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-back-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </center>

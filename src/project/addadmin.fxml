@@ -3,8 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,21 +11,107 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Dashboardcontroller">
-   <bottom>
-      <AnchorPane prefHeight="28.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
-   </bottom>
-   <right>
-      <AnchorPane prefHeight="679.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.addadmincontroller">
+   <center>
+      <VBox fx:id="loginvbox" alignment="TOP_CENTER" prefHeight="433.0" prefWidth="423.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-radius: 10,10,10,10; -fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Add Admin">
+               <font>
+                  <Font name="Segoe UI Semilight" size="64.0" />
+               </font>
+            </Label>
+            <Line endX="300.0" startX="-100.0" />
+            <VBox prefHeight="323.0" prefWidth="401.0">
+               <children>
+                  <VBox prefHeight="85.0" prefWidth="401.0">
+                     <children>
+                        <Label text="Username">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username" prefHeight="25.0" prefWidth="0.0" />
+                        <Label fx:id="userlabel" textFill="#ee4b2b" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="124.0" prefWidth="337.0">
+                     <children>
+                        <Label text="Email">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="0.0" />
+                        <Label fx:id="emaillabel" textFill="#ee4b2b" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="124.0" prefWidth="1440.0">
+                     <children>
+                        <Label text="Password">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="password" />
+                        <Label fx:id="passlabel" textFill="#ee4b2b" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="124.0" prefWidth="1440.0">
+                     <children>
+                        <Label text="Re-enter password">
+                           <font>
+                              <Font name="Segoe UI Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="reenterpass" />
+                        <Label fx:id="repasslabel" textFill="#ee4b2b" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="80.0" prefWidth="415.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="383.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Button fx:id="reset" alignment="CENTER" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="158.0">
+                           <children>
+                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #FF0000;" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
          <BorderPane.margin>
-            <Insets top="30.0" />
+            <Insets top="100.0" />
          </BorderPane.margin>
-      </AnchorPane>
-   </right>
+      </VBox>
+   </center>
    <left>
-      <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="513.0" prefWidth="537.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
                <children>
@@ -46,49 +131,12 @@
             </VBox>
          </children></AnchorPane>
    </left>
-   <center>
-      <AnchorPane prefHeight="602.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView fx:id="table" layoutY="166.0" prefHeight="444.0" prefWidth="1202.0">
-              <columns>
-                <TableColumn fx:id="studidcol" prefWidth="227.0" text="Student ID" />
-                <TableColumn fx:id="fnamecol" prefWidth="185.0" text="Fullname" />
-                  <TableColumn fx:id="mnamecol" prefWidth="174.0" text="Middlename" />
-                  <TableColumn fx:id="lnamecol" prefWidth="135.0" text="Lastname" />
-                  <TableColumn fx:id="coursecol" prefWidth="50.0" text="Course" />
-                  <TableColumn fx:id="agecol" minWidth="0.0" prefWidth="44.0" text="Age" />
-                  <TableColumn fx:id="sexcol" prefWidth="42.0" text="Sex" />
-                  <TableColumn fx:id="hcol" prefWidth="46.0" text="Height" />
-                  <TableColumn fx:id="wcol" prefWidth="55.0" text="Weight" />
-                  <TableColumn fx:id="mobilecol" minWidth="0.0" prefWidth="128.0" text="Mobile Number" />
-                  <TableColumn fx:id="emailcol" minWidth="0.0" prefWidth="140.0" text="Email" />
-                  <TableColumn fx:id="sportcol" minWidth="0.0" prefWidth="125.0" text="Sport" />
-              </columns>
-            </TableView>
-            <VBox alignment="TOP_CENTER" layoutX="459.0" layoutY="16.0" prefHeight="120.0" prefWidth="292.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
-               <children>
-                  <Label text="Search" textFill="WHITE">
-                     <font>
-                        <Font name="Segoe UI Semilight" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextField fx:id="sqlsearch" prefHeight="42.0" prefWidth="272.0" style="-fx-background-radius: 20,20,20,20;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-            <HBox alignment="CENTER" layoutX="501.0" layoutY="620.0" prefHeight="81.0" prefWidth="200.0" />
-         </children>
-      </AnchorPane>
-   </center>
+   <right>
+      <AnchorPane prefHeight="510.0" prefWidth="493.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="182.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
+   </bottom>
    <top>
       <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>

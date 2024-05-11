@@ -3,9 +3,8 @@
 }
 
 #borderpane {
-    -fx-background-image: url("sports.png");
+    -fx-background-image: url("schoolsketch.jpg");
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
-

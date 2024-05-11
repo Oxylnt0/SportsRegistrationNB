@@ -36,7 +36,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
-public class Dashboardcontoller implements Initializable{
+public class Dashboardcontroller implements Initializable{
 
    @FXML
     private Label Fullname;
@@ -136,7 +136,7 @@ public class Dashboardcontoller implements Initializable{
     private TableColumn<players, String> mobilecol;
 
     @FXML
-    private TableColumn<players, String> namecol;
+    private TableColumn<players, String> fnamecol;
 
     @FXML
     private TableColumn<players, String> sexcol;
@@ -147,6 +147,12 @@ public class Dashboardcontoller implements Initializable{
     @FXML
     private TableColumn<players, String> studidcol;
 
+    @FXML
+    private TableColumn<players, String> lnamecol;
+
+    @FXML
+    private TableColumn<players, String> mnamecol;
+    
     @FXML
     private TableColumn<players, String> wcol;
 
@@ -170,7 +176,7 @@ public class Dashboardcontoller implements Initializable{
        } catch(SQLNonTransientConnectionException e){
             JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (SQLException ex) {
-           Logger.getLogger(Dashboardcontoller.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(Dashboardcontroller.class.getName()).log(Level.SEVERE, null, ex);
        }
     }
 
@@ -178,15 +184,15 @@ public class Dashboardcontoller implements Initializable{
     @FXML
     void back(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("adminselect.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("adminselectcss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("About us");
+        stage.setTitle("Admin select");
         stage.setResizable(false);
         stage.show();
         
@@ -223,7 +229,9 @@ public class Dashboardcontoller implements Initializable{
             
             list.add(new players
                     (rs.getString("student_id"), 
-                    rs.getString("firstname"), 
+                    rs.getString("firstname"),
+                    rs.getString("middlename"), 
+                    rs.getString("lastname"), 
                     rs.getString("course"), 
                     rs.getString("age"), 
                     rs.getString("sex"), 
@@ -240,7 +248,9 @@ public class Dashboardcontoller implements Initializable{
            emailcol.setCellValueFactory(new PropertyValueFactory<>("email"));
            hcol.setCellValueFactory(new PropertyValueFactory<>("height"));
            mobilecol.setCellValueFactory(new PropertyValueFactory<>("mobile"));
-           namecol.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+           fnamecol.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+           mnamecol.setCellValueFactory(new PropertyValueFactory<>("middlename"));
+           lnamecol.setCellValueFactory(new PropertyValueFactory<>("lastname"));
            sexcol.setCellValueFactory(new PropertyValueFactory<>("sex"));
            sportcol.setCellValueFactory(new PropertyValueFactory<>("sport"));
            studidcol.setCellValueFactory(new PropertyValueFactory<>("student_id"));
@@ -261,6 +271,12 @@ public class Dashboardcontoller implements Initializable{
                    return true;
                }
                else if (player.getFirstname().toLowerCase().contains(lowerCaseFilter)) {
+                   return true;
+               }
+               else if (player.getMiddlename().toLowerCase().contains(lowerCaseFilter)) {
+                   return true;
+               }
+               else if (player.getLastname().toLowerCase().contains(lowerCaseFilter)) {
                    return true;
                }
                 else if (player.getCourse().toLowerCase().contains(lowerCaseFilter)) {

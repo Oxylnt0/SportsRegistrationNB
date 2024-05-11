@@ -12,9 +12,11 @@ package project;
 
     public class players {
 
-    public players(String student_id, String firstname, String course, String age, String sex, String height, String weight, String mobile, String email, String sport) {
+    public players(String student_id, String firstname, String middlename, String lastname, String course, String age, String sex, String height, String weight, String mobile, String email, String sport) {
         this.student_id = student_id;
         this.firstname = firstname;
+        this.middlename = middlename;
+        this.lastname = lastname;
         this.course = course;
         this.age = age;
         this.sex = sex;
@@ -39,6 +41,22 @@ package project;
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
+
+    public void setMiddlename(String middlename) {
+        this.middlename = middlename;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getCourse() {
@@ -104,6 +122,8 @@ package project;
     public void setSport(String sport) {
         this.sport = sport;
     }
+
+    
         
-    String student_id, firstname, course, age, sex, height, weight, mobile, email, sport;
+    String student_id, firstname, middlename, lastname, course, age, sex, height, weight, mobile, email, sport;
     }

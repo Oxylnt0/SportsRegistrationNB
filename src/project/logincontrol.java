@@ -3,10 +3,14 @@ package project;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLNonTransientConnectionException;
 import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,6 +36,7 @@ public class logincontrol {
     private Scene scene;
     private Parent root;
     public String pass, student_id, fullname, course, age, sex, nationality, religion, height, weight, street, city, province, mobile, email, sport, sportexp, sportcond, medicalcond, medicalspec;
+    public String adminname, code;
     
     @FXML
     private AnchorPane anchorpane;
@@ -102,7 +107,7 @@ public class logincontrol {
         scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("About us");
+        stage.setTitle("Home Page");
         stage.setResizable(false);
         stage.show();
         
@@ -142,34 +147,15 @@ public class logincontrol {
     void submitreleased(MouseEvent event) {
         submit.setMaxSize(115,60);
     }
-    
-    @FXML
-    void onlink(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("primary.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        scene.getStylesheets().add(getClass().getResource("Register.css").toExternalForm());
-        stage.setTitle("Sports Registration");
-        stage.setTitle("San Sebastian Recoletos Sports Registration");
-        Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
-        stage.getIcons().add(icon);
-        stage.setResizable(false);
-        //primary.setMaximized(true);
-        stage.show();
-    }
         
     @FXML
     void onreset(ActionEvent event) {
             username.setText("");
             password.setText("");
     }
-
-    String admin = "admin";
-    String keycode = "password";
     
     @FXML
-    void onsubmit(ActionEvent event) throws SQLException, IOException {
+    void onsubmit(ActionEvent event) throws IOException {
           
          if(username.getText().isEmpty()){
             userlabel.setText("Please enter your Username");
@@ -187,26 +173,57 @@ public class logincontrol {
          
          else if (!password.getText().isEmpty() && !username.getText().isEmpty()) {
              
-            if (username.getText().equals(admin) && password.getText().equals(keycode)) {
-                
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+             try {
+             
+             Connection connectdb = Database.getConnection();
+
+             PreparedStatement ps1 = connectdb
+                    .prepareStatement("select username, password from admin where username = '" + username.getText() + "'");
+             
+             ResultSet rs = ps1.executeQuery();
+             
+             while(rs.next()){
+                         adminname = rs.getString(1);
+                         code = rs.getString(2);
+           }
+             
+             if(adminname == null & code == null){
+                 JOptionPane.showMessageDialog(null, "Admin not found", "Error", JOptionPane.ERROR_MESSAGE);
+                adminname = null;
+                code = null;
+                username.clear();
+                password.clear();
+             }
+
+             else if(username.getText().equals(adminname) & password.getText().equals(code)){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("adminselect.fxml"));
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
-                scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+                scene.getStylesheets().add(getClass().getResource("adminselectcss.css").toExternalForm());
                 Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
                 stage.getIcons().add(icon);
-                stage.setTitle("Dashboard");
+                stage.setTitle("Admin Select");
                 stage.setResizable(false);
                 stage.show();
                 
-         }
+            }
+             
             else {
-                JOptionPane.showMessageDialog(null, "Incorrect Account Details", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Incorrect Password", "Error", JOptionPane.ERROR_MESSAGE);
+                adminname = null;
+                code = null;
+                username.clear();
+                password.clear();
                 userlabel.setText("");
                 passlabel.setText("");
             }
+         }   catch(SQLNonTransientConnectionException e){
+            JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException ex) {
+           Logger.getLogger(Dashboardcontroller.class.getName()).log(Level.SEVERE, null, ex);
+       }   
          
         }
     }

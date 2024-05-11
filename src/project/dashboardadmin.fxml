@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Dashboardcontroller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.dashboardadmincontroller">
    <bottom>
       <AnchorPane prefHeight="28.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
@@ -28,7 +28,7 @@
    <left>
       <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
+            <VBox alignment="CENTER" layoutY="8.0" prefHeight="96.0" prefWidth="114.0">
                <children>
                   <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
                      <font>
@@ -49,43 +49,37 @@
    <center>
       <AnchorPane prefHeight="602.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="table" layoutY="166.0" prefHeight="444.0" prefWidth="1202.0">
-              <columns>
-                <TableColumn fx:id="studidcol" prefWidth="227.0" text="Student ID" />
-                <TableColumn fx:id="fnamecol" prefWidth="185.0" text="Fullname" />
-                  <TableColumn fx:id="mnamecol" prefWidth="174.0" text="Middlename" />
-                  <TableColumn fx:id="lnamecol" prefWidth="135.0" text="Lastname" />
-                  <TableColumn fx:id="coursecol" prefWidth="50.0" text="Course" />
-                  <TableColumn fx:id="agecol" minWidth="0.0" prefWidth="44.0" text="Age" />
-                  <TableColumn fx:id="sexcol" prefWidth="42.0" text="Sex" />
-                  <TableColumn fx:id="hcol" prefWidth="46.0" text="Height" />
-                  <TableColumn fx:id="wcol" prefWidth="55.0" text="Weight" />
-                  <TableColumn fx:id="mobilecol" minWidth="0.0" prefWidth="128.0" text="Mobile Number" />
-                  <TableColumn fx:id="emailcol" minWidth="0.0" prefWidth="140.0" text="Email" />
-                  <TableColumn fx:id="sportcol" minWidth="0.0" prefWidth="125.0" text="Sport" />
-              </columns>
-            </TableView>
-            <VBox alignment="TOP_CENTER" layoutX="459.0" layoutY="16.0" prefHeight="120.0" prefWidth="292.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+            <HBox alignment="CENTER" layoutX="501.0" layoutY="620.0" prefHeight="81.0" prefWidth="200.0" />
+            <VBox layoutX="248.0" layoutY="58.0" prefHeight="622.0" prefWidth="547.0" spacing="20.0">
                <children>
-                  <Label text="Search" textFill="WHITE">
-                     <font>
-                        <Font name="Segoe UI Semilight" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextField fx:id="sqlsearch" prefHeight="42.0" prefWidth="272.0" style="-fx-background-radius: 20,20,20,20;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </TextField>
+                  <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="292.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                     <children>
+                        <Label text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="sqlsearch" prefHeight="42.0" prefWidth="272.0" style="-fx-background-radius: 20,20,20,20;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="table" prefHeight="444.0" prefWidth="494.0">
+                    <columns>
+                      <TableColumn fx:id="usernamecol" prefWidth="287.0" text="Username" />
+                        <TableColumn fx:id="emailcol" prefWidth="259.0" text="Email" />
+                    </columns>
+                  </TableView>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutX="501.0" layoutY="620.0" prefHeight="81.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </center>
