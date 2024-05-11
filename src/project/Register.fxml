@@ -152,11 +152,20 @@
                         </VBox>
                         <VBox prefHeight="93.0" prefWidth="537.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="27.0" prefWidth="62.0" text="Name">
-                                 <font>
-                                    <Font name="Segoe UI Semilight" size="18.0" />
-                                 </font>
-                              </Label>
+                              <HBox prefHeight="26.0" prefWidth="537.0" spacing="122.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="62.0" text="Name">
+                                       <font>
+                                          <Font name="Segoe UI Semilight" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_CENTER" prefHeight="27.0" prefWidth="156.0" text="*Enter none if not applicable">
+                                       <font>
+                                          <Font name="Segoe UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="47.0" prefWidth="473.0" spacing="15.0">
                                  <children>
                                     <VBox prefHeight="47.0" prefWidth="169.0">
@@ -266,7 +275,7 @@
                               </VBox>
                               <HBox prefHeight="79.0" prefWidth="321.0" spacing="15.0">
                                  <children>
-                                    <VBox prefHeight="100.0" prefWidth="149.0" spacing="5.0">
+                                    <VBox prefHeight="89.0" prefWidth="107.0" spacing="5.0">
                                        <children>
                                           <Label prefHeight="20.0" prefWidth="179.0" text="Height">
                                              <font>
@@ -275,7 +284,7 @@
                                           </Label>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <TextField fx:id="height" prefHeight="25.0" prefWidth="111.0" promptText="Centimeters">
+                                                <TextField fx:id="height" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="94.0" promptText="Centimeters">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>
@@ -294,7 +303,7 @@
                                           </Label>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <TextField fx:id="weight" promptText="Kilograms">
+                                                <TextField fx:id="weight" maxWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" promptText="Kilograms">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font>

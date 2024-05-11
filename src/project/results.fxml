@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1440.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.resultscontroller">
@@ -125,48 +124,51 @@
          </children>
       </AnchorPane>
    </top>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
    <center>
-      <VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="517.0" spacing="10.0" style="-fx-background-radius: 10,10,10,10; -fx-border-color: red; -fx-border-radius: 10,10,10,10; -fx-background-color: white;" BorderPane.alignment="CENTER">
+      <VBox fx:id="childbox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="335.0" prefWidth="517.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="70.0" prefWidth="518.0" text="Registration Successfull">
+            <Label alignment="CENTER" prefHeight="106.0" prefWidth="517.0" text="Registration Successful" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI Semilight" size="48.0" />
+                  <Font name="Segoe UI Black" size="36.0" />
                </font>
             </Label>
-            <Line endX="400.0" startX="-100.0" />
-            <VBox alignment="TOP_CENTER" prefHeight="218.0" prefWidth="495.0">
+            <VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="517.0" spacing="10.0" style="-fx-border-color: black; -fx-background-color: #FAFDF3;">
                <children>
-                  <Label prefHeight="54.0" prefWidth="272.0" text="Thank you for Registering" wrapText="true">
-                     <font>
-                        <Font name="Segoe UI Semilight" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="tyname" prefHeight="70.0" prefWidth="518.0">
-                     <font>
-                        <Font name="Segoe UI Semilight" size="48.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="54.0" prefWidth="325.0" text="Please wait for further updates" wrapText="true">
-                     <font>
-                        <Font name="Segoe UI Semilight" size="24.0" />
-                     </font>
-                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="218.0" prefWidth="495.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="272.0" text="Thank you for Registering" wrapText="true">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tyname" alignment="CENTER" prefHeight="70.0" prefWidth="518.0">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="54.0" prefWidth="325.0" text="Please wait for further updates" wrapText="true">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label fx:id="sportlabel" />
                </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </VBox>
-            <Label fx:id="sportlabel" />
          </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
          <BorderPane.margin>
             <Insets bottom="100.0" />
          </BorderPane.margin>
       </VBox>
    </center>
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
 </BorderPane>

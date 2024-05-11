@@ -249,28 +249,7 @@ public class Registercontroller {
             else if (badminton.isSelected()) {
                 sports = "Badminton";
             }
-
-            // SQL
-            //Database database = new Database();
-
-            Connection connectdb = Database.getConnection();
-
-            PreparedStatement ps1 = connectdb
-                    .prepareStatement("INSERT INTO player_id Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-
-            ps1.setString(1, StudentID.getText());
-            ps1.setString(2, firstname.getText());
-            ps1.setString(3, middlename.getText());
-            ps1.setString(4, lastname.getText());
-            ps1.setString(5, Courses.getText());
-            ps1.setString(6, age.getText());
-            ps1.setString(7, sex);
-            ps1.setString(8, height.getText());
-            ps1.setString(9, weight.getText());
-            ps1.setString(10, number.getText());
-            ps1.setString(11, email.getText());
-            ps1.setString(12, sports);
-            
+             
             if (StudentID.getText().isEmpty() |
                     firstname.getText().isEmpty() |
                     middlename.getText().isEmpty() |
@@ -433,10 +412,39 @@ public class Registercontroller {
                 numlabel.setText("");
                 emaillabel.setText("");
                 sportlabel.setText("");
+          
+                                 Connection connectdb = Database.getConnection();
+
+                                 PreparedStatement ps1 = connectdb
+                                         .prepareStatement("INSERT INTO player_id Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                                 
+                                 ps1.setString(1, StudentID.getText());
+                                 ps1.setString(2, firstname.getText());
+                                 
+                                 String fullname;
+                                 
+                                 if(middlename.getText().toLowerCase().equals("none")){
+                                 ps1.setString(3, "N/A");
+                                 fullname = firstname.getText() + " " + lastname.getText();
+                                 }
+                                 else {
+                                 ps1.setString(3, middlename.getText());
+                                 fullname = firstname.getText() + " " + middlename.getText() + " " + lastname.getText();
+                                 }
+                                 
+                                 ps1.setString(4, lastname.getText());
+                                 ps1.setString(5, Courses.getText());
+                                 ps1.setString(6, age.getText());
+                                 ps1.setString(7, sex);
+                                 ps1.setString(8, height.getText());
+                                 ps1.setString(9, weight.getText());
+                                 ps1.setString(10, number.getText());
+                                 ps1.setString(11, email.getText());
+                                 ps1.setString(12, sports);
                 
                 ps1.executeUpdate();
                 
-                                String fullname = firstname.getText() + " " + middlename.getText() + " " + lastname.getText();
+                                
                 
                                  FXMLLoader loader = new FXMLLoader(getClass().getResource("results.fxml"));
                                  root = loader.load();
@@ -475,7 +483,8 @@ public class Registercontroller {
         } catch (DerbySQLIntegrityConstraintViolationException e) {
             JOptionPane.showMessageDialog(null, "Student ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
         } catch(SQLDataException e){
-            JOptionPane.showMessageDialog(null, "Please input correct Data", "Error", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null, "Please input correct Data", "Error", JOptionPane.ERROR_MESSAGE);
+                System.out.println(e);
         } catch(SQLNonTransientConnectionException e){
             JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
         }

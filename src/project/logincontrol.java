@@ -201,6 +201,9 @@ public class logincontrol {
              }
 
              else if(username.getText().equals(adminname) & password.getText().equals(code)){
+                 
+                 JOptionPane.showMessageDialog(null, "Login Successful");
+                 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("adminselect.fxml"));
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
