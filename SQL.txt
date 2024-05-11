@@ -1,18 +1,23 @@
 create table player_id
 (
-
     student_id int primary key not null,
     firstname varchar(50) not null,
     middlename varchar(50) not null,
-    lastname varchar (50) not null,
+    lastname varchar (50) not null,
     course varchar(30) not null,
     age varchar (5) not null,
-    sex varchar(10) not null,
+    sex varchar(10) not null,
     height float not null,
-    weight float not null,
+    weight float not null,
     mobile_no varchar(50) not null,
-    email varchar(50) not null,
+    email varchar(50) not null,
     sport varchar(50) not null
-    
+);
+
+create table admin
+(
+    username varchar(50) not null,
+    email varchar(50) not null,
+    password(50) not null
 );
 
