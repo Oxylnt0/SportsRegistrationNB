@@ -128,7 +128,7 @@
                                  <children>
                                     <Button fx:id="register" alignment="CENTER" mnemonicParsing="false" onAction="#onregister" onMouseEntered="#registeren" onMouseExited="#registerex" onMousePressed="#registerp" onMouseReleased="#registerr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Register" textAlignment="CENTER">
                                        <font>
-                                          <Font name="Segoe UI Semibold" size="24.0" />
+                                          <Font name="Segoe UI Semibold" size="21.0" />
                                        </font>
                                     </Button>
                                  </children>
@@ -153,7 +153,7 @@
                                  <children>
                                     <Button fx:id="adminlogin" alignment="CENTER" mnemonicParsing="false" onAction="#onadminlogin" onMouseEntered="#adminen" onMouseExited="#adminex" onMousePressed="#adminp" onMouseReleased="#adminr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="Admin Login" textAlignment="CENTER" wrapText="true">
                                        <font>
-                                          <Font name="Segoe UI Semibold" size="24.0" />
+                                          <Font name="Segoe UI Semibold" size="21.0" />
                                        </font>
                                     </Button>
                                  </children>
@@ -178,7 +178,7 @@
                                  <children>
                                     <Button fx:id="aboutus" alignment="CENTER" mnemonicParsing="false" onAction="#onabout" onMouseEntered="#abouten" onMouseExited="#aboutex" onMousePressed="#aboutp" onMouseReleased="#aboutr" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="About us" textAlignment="CENTER">
                                        <font>
-                                          <Font name="Segoe UI Semibold" size="24.0" />
+                                          <Font name="Segoe UI Semibold" size="21.0" />
                                        </font>
                                     </Button>
                                  </children>
