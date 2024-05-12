@@ -18,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -161,6 +162,8 @@ public class adminselectcontroller {
     @FXML
     void back(ActionEvent event) throws IOException {
 
+        JOptionPane.showMessageDialog(null, "Log out Successful");
+        
         FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -187,12 +190,12 @@ public class adminselectcontroller {
 
     @FXML
     void backp(MouseEvent event) {
-        backbtn.setMaxSize(85, 70);
+        backbtn.setMaxSize(125, 33);
     }
 
     @FXML
     void backr(MouseEvent event) {
-        backbtn.setMaxSize(90, 75);
+        backbtn.setMaxSize(130, 38);
     }
     
 }

@@ -195,19 +195,12 @@
    <left>
       <AnchorPane prefHeight="558.0" prefWidth="372.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
+            <VBox alignment="CENTER" prefHeight="69.0" prefWidth="147.0">
                <children>
-                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
+                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #FF0000;" text="Log out" textFill="WHITE">
                      <font>
-                        <Font name="Segoe UI Light" size="24.0" />
+                        <Font name="Segoe UI Semilight" size="24.0" />
                      </font>
-                     <graphic>
-                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons8-back-50.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
                   </Button>
                </children>
             </VBox>
