@@ -192,7 +192,7 @@ public class Dashboardcontroller implements Initializable{
         scene.getStylesheets().add(getClass().getResource("adminselectcss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("Admin select");
+        stage.setTitle("Admin Select");
         stage.setResizable(false);
         stage.show();
         

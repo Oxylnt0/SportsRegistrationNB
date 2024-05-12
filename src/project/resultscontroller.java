@@ -80,7 +80,7 @@ public class resultscontroller {
         scene.getStylesheets().add(getClass().getResource("mainpagecss.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("About us");
+        stage.setTitle("Home Page");
         stage.setResizable(false);
         stage.show();
         

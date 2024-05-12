@@ -132,7 +132,7 @@ public class adminselectcontroller {
         scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
         Image icon = new Image(getClass().getResourceAsStream("SSCRLogo1.png"));
         stage.getIcons().add(icon);
-        stage.setTitle("About us");
+        stage.setTitle("Registrant List");
         stage.setResizable(false);
         stage.show();
         
