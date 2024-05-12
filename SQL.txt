@@ -5,7 +5,7 @@ create table player_id
     middlename varchar(50) not null,
     lastname varchar (50) not null,
     course varchar(30) not null,
-    age varchar (5) not null,
+    age int not null,
     sex varchar(10) not null,
     height float not null,
     weight float not null,
@@ -20,4 +20,6 @@ create table admin
     email varchar(50) not null,
     password varchar(50) not null
 );
+
+insert into admin values('Simoun', 'simounandre@gmail.com', 'oxylnto');
 
