@@ -457,7 +457,7 @@
                            <children>
                               <Button fx:id="reset" mnemonicParsing="false" onAction="#onreset" onMouseEntered="#reseten" onMouseExited="#resetex" onMousePressed="#resetpressed" onMouseReleased="#resetreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #ffbf00;" text="Reset">
                                  <font>
-                                    <Font name="SansSerif Regular" size="24.0" />
+                                    <Font name="Segoe UI Light" size="24.0" />
                                  </font>
                               </Button>
                            </children>
@@ -466,7 +466,7 @@
                            <children>
                               <Button fx:id="submit" mnemonicParsing="false" onAction="#onsubmit" onMouseEntered="#submiten" onMouseExited="#submitex" onMousePressed="#submitpressed" onMouseReleased="#submitreleased" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #ffbf00;" text="Submit">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Segoe UI Light" size="24.0" />
                                  </font>
                               </Button>
                            </children>

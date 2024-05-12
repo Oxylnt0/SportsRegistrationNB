@@ -116,7 +116,7 @@
          <children>
             <HBox alignment="CENTER" layoutX="91.0" layoutY="150.0" prefHeight="274.0" prefWidth="1277.0" spacing="100.0">
                <children>
-                  <VBox fx:id="registerbox" alignment="BOTTOM_CENTER" prefHeight="316.0" prefWidth="200.0" spacing="10.0" style="-fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="registerbox" alignment="BOTTOM_CENTER" prefHeight="316.0" prefWidth="200.0" spacing="10.0" style="-fx-background-radius: 20,20,20,20; -fx-border-color: black; -fx-border-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -140,7 +140,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="adminbox" alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="15.0" style="-fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="adminbox" alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="15.0" style="-fx-background-radius: 20,20,20,20; -fx-border-color: black; -fx-border-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -165,7 +165,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="aboutbox" alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="25.0" style="-fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="aboutbox" alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="25.0" style="-fx-background-radius: 20,20,20,20; -fx-border-radius: 20,20,20,20; -fx-border-color: black;">
                      <children>
                         <ImageView fitHeight="125.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -190,7 +190,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="webbox" alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="25.0" style="-fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="webbox" alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="25.0" style="-fx-background-radius: 20,20,20,20; -fx-border-color: black; -fx-border-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>

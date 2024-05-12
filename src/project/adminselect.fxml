@@ -98,25 +98,22 @@
             </ImageView>
          </children>
          <BorderPane.margin>
-            <Insets bottom="30.0" />
+            <Insets />
          </BorderPane.margin>
       </AnchorPane>
    </top>
-   <left>
-      <AnchorPane prefHeight="510.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-   </left>
    <right>
-      <AnchorPane prefHeight="510.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+      <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="372.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <AnchorPane prefHeight="227.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="188.0" prefWidth="1440.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="974.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" layoutX="91.0" layoutY="150.0" prefHeight="274.0" prefWidth="1277.0" spacing="100.0">
+            <HBox alignment="CENTER" layoutX="84.0" layoutY="90.0" prefHeight="274.0" prefWidth="773.0" spacing="100.0">
                <children>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="316.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="registerbox" alignment="BOTTOM_CENTER" prefHeight="316.0" prefWidth="200.0" spacing="10.0" style="-fx-background-radius: 20,20,20,20; -fx-border-color: black; -fx-border-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -140,7 +137,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="adminbox" alignment="BOTTOM_CENTER" prefHeight="345.0" prefWidth="200.0" spacing="10.0" style="-fx-background-radius: 20,20,20,20; -fx-border-radius: 20,20,20,20; -fx-border-color: black;">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -165,7 +162,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: red; -fx-background-radius: 20,20,20,20;">
+                  <VBox fx:id="addbox" alignment="BOTTOM_CENTER" prefHeight="220.0" prefWidth="200.0" spacing="15.0" style="-fx-background-radius: 20,20,20,20; -fx-border-color: black; -fx-border-radius: 20,20,20,20;">
                      <children>
                         <ImageView fitHeight="140.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -192,7 +189,13 @@
                   </VBox>
                </children>
             </HBox>
-            <VBox alignment="CENTER" layoutY="-28.0" prefHeight="96.0" prefWidth="114.0">
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="558.0" prefWidth="372.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
                <children>
                   <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
                      <font>
@@ -210,5 +213,5 @@
             </VBox>
          </children>
       </AnchorPane>
-   </center>
+   </left>
 </BorderPane>

@@ -25,27 +25,6 @@
          </BorderPane.margin>
       </AnchorPane>
    </right>
-   <left>
-      <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" layoutY="8.0" prefHeight="96.0" prefWidth="114.0">
-               <children>
-                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
-                     <font>
-                        <Font name="Segoe UI Light" size="24.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons8-back-50.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-         </children></AnchorPane>
-   </left>
    <top>
       <AnchorPane fx:id="anchorpane" minHeight="-Infinity" prefHeight="132.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
@@ -167,4 +146,26 @@
          </top>
       </BorderPane>
    </center>
+   <left>
+      <AnchorPane prefHeight="709.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="114.0">
+               <children>
+                  <Button fx:id="backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" onMouseEntered="#backenter" onMouseExited="#backexit" onMousePressed="#backp" onMouseReleased="#backr" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #FF0000;" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-back-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
 </BorderPane>

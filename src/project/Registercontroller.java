@@ -483,8 +483,7 @@ public class Registercontroller {
         } catch (DerbySQLIntegrityConstraintViolationException e) {
             JOptionPane.showMessageDialog(null, "Student ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
         } catch(SQLDataException e){
-//            JOptionPane.showMessageDialog(null, "Please input correct Data", "Error", JOptionPane.ERROR_MESSAGE);
-                System.out.println(e);
+            JOptionPane.showMessageDialog(null, "Please input correct Data", "Error", JOptionPane.ERROR_MESSAGE);
         } catch(SQLNonTransientConnectionException e){
             JOptionPane.showMessageDialog(null, "Not connected to Database", "Error", JOptionPane.ERROR_MESSAGE);
         }
