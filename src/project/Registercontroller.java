@@ -300,7 +300,7 @@ public class Registercontroller {
                 
                 if (Courses.getText().isEmpty()) 
                 {
-                    clabel.setText("*Input Level");
+                    clabel.setText("*Input Course/Level");
                 } 
                 
                 else if (!Courses.getText().isEmpty())     

@@ -203,7 +203,7 @@
                                  <children>
                                     <Button fx:id="website" alignment="CENTER" mnemonicParsing="false" onAction="#onwebsite" onMouseEntered="#weben" onMouseExited="#webex" onMousePressed="#websitep" onMouseReleased="#webister" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #ffbf00;" text="SSCR Cavite Website" textAlignment="CENTER" wrapText="true">
                                        <font>
-                                          <Font name="Segoe UI Semibold" size="18.0" />
+                                          <Font name="Segoe UI Semibold" size="17.0" />
                                        </font>
                                     </Button>
                                  </children>
