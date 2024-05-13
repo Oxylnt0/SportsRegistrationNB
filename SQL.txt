@@ -21,5 +21,8 @@ create table admin
     password varchar(50) not null
 );
 
-insert into admin values('Simoun', 'simounandre@gmail.com', 'oxylnto');
-
+insert into admin values('Simoun', 'simounandre@gmail.com', '1234');
+insert into admin values('Toby', 'toby@gmail.com', '1234');
+insert into admin values('Sean', 'sean@gmail.com', '1234');
+insert into admin values('Josh', 'josh@gmail.com', '1234');
+insert into admin values('Kim', 'kim@gmail.com', '1234');
